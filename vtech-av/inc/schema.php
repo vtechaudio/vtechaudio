@@ -19,7 +19,7 @@ function vtech_nap() {
 		'name'    => 'VTECH Audio Visual Solutions',
 		'email'   => get_theme_mod( 'vtech_email', 'info@vtechaudio.co.ke' ),
 		'phone'   => get_theme_mod( 'vtech_phone', '+254 728 135 246' ),
-		'street'  => get_theme_mod( 'vtech_address', 'Mpaka Plaza, Mpaka Road' ),
+		'street'  => get_theme_mod( 'vtech_address', 'Ground Floor, Mpaka Plaza, Mpaka Road' ),
 		'locality'=> 'Nairobi',
 		'region'  => 'Nairobi County',
 		'country' => 'KE',

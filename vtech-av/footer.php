@@ -17,7 +17,7 @@ if ( ! defined( 'ABSPATH' ) ) { exit; }
 			<p><?php echo esc_html( vtech_opt( 'vtech_footer_blurb', "Kenya's premium audio-visual integrator. Sound, LED, lighting, conference & PA systems, acoustics and digital signage designed, installed and supported across Kenya and East Africa." ) ); ?></p>
 			<address>
 				<strong>VTECH Audio Visual Solutions</strong><br>
-				<?php echo esc_html( vtech_opt( 'vtech_address', 'Mpaka Plaza, Mpaka Road, Nairobi' ) ); ?><br>
+				<?php echo esc_html( vtech_opt( 'vtech_address', 'Ground Floor, Mpaka Plaza, Mpaka Road, Nairobi' ) ); ?><br>
 				<a href="tel:<?php echo esc_attr( str_replace( ' ', '', vtech_opt( 'vtech_phone', '+254 728 135 246' ) ) ); ?>"><?php echo esc_html( vtech_opt( 'vtech_phone', '+254 728 135 246' ) ); ?></a><br>
 				<a href="mailto:<?php echo esc_attr( vtech_opt( 'vtech_email', 'info@vtechaudio.co.ke' ) ); ?>"><?php echo esc_html( vtech_opt( 'vtech_email', 'info@vtechaudio.co.ke' ) ); ?></a><br>
 				<span><?php echo esc_html( vtech_opt( 'vtech_hours', 'Mon–Fri, 9:00 AM – 6:00 PM' ) ); ?></span>
@@ -74,7 +74,7 @@ if ( ! defined( 'ABSPATH' ) ) { exit; }
 		<div class="site-footer__col">
 			<h3 class="footer-widget__title"><?php esc_html_e( 'Visit Us', 'vtech-av' ); ?></h3>
 			<?php
-			$map = vtech_opt( 'vtech_map_embed', 'https://www.google.com/maps?q=Mpaka+Road+Nairobi&output=embed' );
+			$map = vtech_opt( 'vtech_map_embed', 'https://www.google.com/maps?q=Mpaka+Plaza+Mpaka+Road+Nairobi&output=embed' );
 			if ( $map ) : ?>
 				<div class="footer-map"><iframe title="<?php esc_attr_e( 'VTECH office location map', 'vtech-av' ); ?>" src="<?php echo esc_url( $map ); ?>" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
 			<?php endif; ?>

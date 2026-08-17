@@ -17,7 +17,7 @@ add_action( 'customize_register', function ( $wp_customize ) {
 		'vtech_phone'    => array( 'Phone', '+254 728 135 246' ),
 		'vtech_whatsapp' => array( 'WhatsApp number (digits only)', '254728135246' ),
 		'vtech_email'    => array( 'Email', 'info@vtechaudio.co.ke' ),
-		'vtech_address'  => array( 'Address', 'Mpaka Plaza, Mpaka Road, Nairobi' ),
+		'vtech_address'  => array( 'Address', 'Ground Floor, Mpaka Plaza, Mpaka Road, Nairobi' ),
 		'vtech_hours'    => array( 'Business Hours', 'Mon–Fri, 9:00 AM – 6:00 PM' ),
 		'vtech_map_embed'=> array( 'Google Map embed URL', '' ),
 		'vtech_geo_lat'  => array( 'Map latitude (for SEO, e.g. -1.2669)', '-1.2669' ),
