@@ -26,7 +26,7 @@ $img = VTECH_URI . '/assets/img/';
 <section class="section section--surface"><div class="container">
 	<h2 class="section__title" style="text-align:center"><?php esc_html_e( 'By the numbers', 'vtech-av' ); ?></h2>
 	<div class="about-stats">
-		<div><div class="about-stat__num">200+</div><p><?php esc_html_e( 'Installations delivered', 'vtech-av' ); ?></p></div>
+		<div><div class="about-stat__num">42+</div><p><?php esc_html_e( 'Installations delivered', 'vtech-av' ); ?></p></div>
 		<div><div class="about-stat__num">47</div><p><?php esc_html_e( 'Counties served', 'vtech-av' ); ?></p></div>
 		<div><div class="about-stat__num">24h</div><p><?php esc_html_e( 'Quote turnaround', 'vtech-av' ); ?></p></div>
 		<div><div class="about-stat__num">12mo</div><p><?php esc_html_e( 'Support & warranty', 'vtech-av' ); ?></p></div>

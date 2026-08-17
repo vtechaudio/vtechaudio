@@ -17,7 +17,7 @@ add_action( 'customize_register', function ( $wp_customize ) {
 		'vtech_phone'    => array( 'Phone', '+254 728 135 246' ),
 		'vtech_whatsapp' => array( 'WhatsApp number (digits only)', '254728135246' ),
 		'vtech_email'    => array( 'Email', 'info@vtechaudio.co.ke' ),
-		'vtech_address'  => array( 'Address', 'Ground Floor, Mpaka Plaza, Mpaka Road, Nairobi' ),
+		'vtech_address'  => array( 'Address', 'Ground Floor, Mpaka Plaza, Mpaka Road, Westlands, Nairobi, P.O. Box 66734-00800' ),
 		'vtech_hours'    => array( 'Business Hours', 'Mon–Fri, 9:00 AM – 6:00 PM' ),
 		'vtech_map_embed'=> array( 'Google Map embed URL', '' ),
 		'vtech_geo_lat'  => array( 'Map latitude (for SEO, e.g. -1.2669)', '-1.2669' ),
@@ -66,7 +66,7 @@ add_action( 'customize_register', function ( $wp_customize ) {
 	/* --- Homepage Trust Stats --- */
 	$wp_customize->add_section( 'vtech_stats', array( 'title' => 'Homepage Trust Stats', 'panel' => 'vtech_panel' ) );
 	$vtc_stat_defaults = array(
-		'vtech_stat1_num' => array( 'Stat 1 number', '200+' ),
+		'vtech_stat1_num' => array( 'Stat 1 number', '42+' ),
 		'vtech_stat1_lbl' => array( 'Stat 1 label', 'Installations delivered' ),
 		'vtech_stat2_num' => array( 'Stat 2 number', '47' ),
 		'vtech_stat2_lbl' => array( 'Stat 2 label', 'Counties served' ),

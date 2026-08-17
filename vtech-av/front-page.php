@@ -52,7 +52,7 @@ $img = VTECH_URI . '/assets/img/';
 		</div>
 		<?php
 		$vtc_stats = array(
-			array( vtech_opt( 'vtech_stat1_num', '200+' ),  vtech_opt( 'vtech_stat1_lbl', 'Installations delivered' ) ),
+			array( vtech_opt( 'vtech_stat1_num', '42+' ),  vtech_opt( 'vtech_stat1_lbl', 'Installations delivered' ) ),
 			array( vtech_opt( 'vtech_stat2_num', '47' ),    vtech_opt( 'vtech_stat2_lbl', 'Counties served' ) ),
 			array( vtech_opt( 'vtech_stat3_num', '24h' ),   vtech_opt( 'vtech_stat3_lbl', 'Quote turnaround' ) ),
 			array( vtech_opt( 'vtech_stat4_num', '12mo' ),  vtech_opt( 'vtech_stat4_lbl', 'Support & warranty' ) ),
@@ -181,7 +181,7 @@ if ( ! empty( $vtc_clients ) ) : ?>
 		<div class="stats">
 			<?php
 			$vtc_blue_stats = array(
-				array( vtech_opt( 'vtech_stat1_num', '200+' ),  vtech_opt( 'vtech_stat1_lbl', 'Installations delivered' ) ),
+				array( vtech_opt( 'vtech_stat1_num', '42+' ),  vtech_opt( 'vtech_stat1_lbl', 'Installations delivered' ) ),
 				array( vtech_opt( 'vtech_stat2_num', '47' ),    vtech_opt( 'vtech_stat2_lbl', 'Counties served' ) ),
 				array( vtech_opt( 'vtech_stat3_num', '24h' ),   vtech_opt( 'vtech_stat3_lbl', 'Quote turnaround' ) ),
 				array( vtech_opt( 'vtech_stat4_num', '12mo' ),  vtech_opt( 'vtech_stat4_lbl', 'Support & warranty' ) ),
@@ -216,7 +216,7 @@ if ( $projects->have_posts() ) : ?>
 		<div class="card-grid card-grid--3">
 		<?php while ( $projects->have_posts() ) : $projects->the_post(); ?>
 			<a class="card card--project" href="<?php the_permalink(); ?>">
-				<?php if ( has_post_thumbnail() ) : ?><figure class="card__media"><?php the_post_thumbnail( 'vtech-card', array( 'loading' => 'lazy' ) ); ?></figure><?php endif; ?>
+				<?php if ( has_post_thumbnail() ) : ?><figure class="card__media"><?php the_post_thumbnail( 'vtech-card', array( 'loading' => 'lazy' ) ); ?></figure><?php else : ?><figure class="card__media"><img src="<?php echo esc_url( $img . 'og-default.webp' ); ?>" alt="<?php echo esc_attr( get_the_title() ); ?> — VTECH project" loading="lazy" decoding="async"></figure><?php endif; ?>
 				<div class="card__body">
 					<h3 class="card__title"><?php the_title(); ?></h3>
 					<p class="card__excerpt"><?php echo esc_html( wp_trim_words( get_the_excerpt(), 16 ) ); ?></p>

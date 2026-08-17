@@ -136,7 +136,7 @@ function vtech_render_doc_html( $id ) {
 	$deposit_pct = (float) get_post_meta( $id, 'deposit_pct', true );
 
 	$company = 'VTECH Audio Visual Solutions';
-	$addr    = get_theme_mod( 'vtech_address', 'Ground Floor, Mpaka Plaza, Mpaka Road, Nairobi' );
+	$addr    = get_theme_mod( 'vtech_address', 'Ground Floor, Mpaka Plaza, Mpaka Road, Westlands, Nairobi, P.O. Box 66734-00800' );
 	$phone   = get_theme_mod( 'vtech_phone', '+254 728 135 246' );
 	$email   = get_theme_mod( 'vtech_email', 'info@vtechaudio.co.ke' );
 	$primary = '#81007F';
@@ -234,7 +234,7 @@ function vtech_stream_pdf( $id, $download = true ) {
 
 	$pdf = new VTECH_PDF();
 	$pdf->text( 'VTECH Audio Visual Solutions', 18, true, array( 0.505, 0.0, 0.498 ) );
-	$pdf->text( get_theme_mod( 'vtech_address', 'Ground Floor, Mpaka Plaza, Mpaka Road, Nairobi' ) . '  |  ' . get_theme_mod( 'vtech_phone', '+254 728 135 246' ) . '  |  ' . get_theme_mod( 'vtech_email', 'info@vtechaudio.co.ke' ), 9 );
+	$pdf->text( get_theme_mod( 'vtech_address', 'Ground Floor, Mpaka Plaza, Mpaka Road, Westlands, Nairobi, P.O. Box 66734-00800' ) . '  |  ' . get_theme_mod( 'vtech_phone', '+254 728 135 246' ) . '  |  ' . get_theme_mod( 'vtech_email', 'info@vtechaudio.co.ke' ), 9 );
 	$pdf->rule();
 	$pdf->heading( $title . '   ' . $ref );
 	$pdf->text( 'Date: ' . date_i18n( 'j M Y' ) . '   |   ' . ( 'invoice' === $type ? 'Due: ' : 'Valid until: ' ) . date_i18n( 'j M Y', strtotime( '+30 days' ) ), 10 );
