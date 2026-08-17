@@ -38,10 +38,17 @@ function vtech_json_ld( $data ) {
 }
 
 add_action( 'wp_head', function () {
-	// Rank Math (or another SEO plugin) owns the structured-data graph when active.
-	if ( function_exists( 'vtech_seo_plugin_active' ) && vtech_seo_plugin_active() ) { return; }
+	// HYBRID SCHEMA OWNERSHIP (v5.29.0): Rank Math (when active) owns the sitewide
+	// entity graph — Organization / LocalBusiness / WebSite (BreadcrumbList lives
+	// in inc/breadcrumbs.php). We defer ONLY that to the plugin, to avoid a second,
+	// conflicting LocalBusiness node. The richer per-page schema further down
+	// (Service, FAQPage, project CreativeWork) is ALWAYS emitted, because Rank Math
+	// does not build it from the theme's ACF data.
+	$seo_active = ( function_exists( 'vtech_seo_plugin_active' ) && vtech_seo_plugin_active() );
 	$nap = vtech_nap();
 	$logo = get_theme_mod( 'vtech_logo_url', VTECH_URI . '/assets/img/logo.png' );
+
+	if ( ! $seo_active ) {
 
 	// Organization + LocalBusiness (site-wide).
 	vtech_json_ld( array(
@@ -96,7 +103,11 @@ add_action( 'wp_head', function () {
 		),
 	) );
 
-	// Service schema on single service.
+	} // end sitewide entity graph (deferred to the SEO plugin when active).
+
+	// --- PER-PAGE SCHEMA: always emitted; complements Rank Math using our ACF data. ---
+
+	// Project -> CreativeWork.
 	if ( is_singular( 'project' ) ) {
 		$img_url = has_post_thumbnail() ? get_the_post_thumbnail_url( get_the_ID(), 'vtech-og' ) : $logo;
 		$proj = array(
