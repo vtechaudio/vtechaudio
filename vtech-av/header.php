@@ -50,7 +50,7 @@ if ( ! function_exists( 'vtech_social_icon' ) ) {
 			<?php endforeach; ?>
 		</div>
 		<div class="utility-bar__contact">
-			<span class="utility-bar__item"><a href="tel:<?php echo esc_attr( str_replace( ' ', '', vtech_opt( 'vtech_phone', '+254 728135246' ) ) ); ?>"><?php echo esc_html( vtech_opt( 'vtech_phone', '+254 728135246' ) ); ?></a></span>
+			<span class="utility-bar__item"><a href="tel:<?php echo esc_attr( str_replace( ' ', '', vtech_opt( 'vtech_phone', '+254 728 135 246' ) ) ); ?>"><?php echo esc_html( vtech_opt( 'vtech_phone', '+254 728 135 246' ) ); ?></a></span>
 			<span class="utility-bar__item"><a href="mailto:<?php echo esc_attr( vtech_opt( 'vtech_email', 'info@vtechaudio.co.ke' ) ); ?>"><?php echo esc_html( vtech_opt( 'vtech_email', 'info@vtechaudio.co.ke' ) ); ?></a></span>
 			<span class="utility-bar__item utility-bar__hours"><?php echo esc_html( vtech_opt( 'vtech_hours', 'Mon–Fri, 9:00 AM – 6:00 PM' ) ); ?></span>
 		</div>
@@ -84,7 +84,7 @@ if ( ! function_exists( 'vtech_social_icon' ) ) {
 	<?php wp_nav_menu( array( 'theme_location' => 'primary', 'container' => false, 'menu_class' => 'mobile-nav__menu', 'fallback_cb' => false, 'depth' => 2 ) ); ?>
 	<div class="mobile-nav__cta">
 		<a class="btn btn--accent btn--block" href="<?php echo esc_url( home_url( '/consultation/' ) ); ?>"><?php esc_html_e( 'Book a Consultation', 'vtech-av' ); ?></a>
-		<a class="btn btn--ghost btn--block" href="tel:<?php echo esc_attr( str_replace( ' ', '', get_theme_mod( 'vtech_phone', '+254703201241' ) ) ); ?>"><?php esc_html_e( 'Call Us', 'vtech-av' ); ?></a>
+		<a class="btn btn--ghost btn--block" href="tel:<?php echo esc_attr( str_replace( ' ', '', get_theme_mod( 'vtech_phone', '+254 728 135 246' ) ) ); ?>"><?php esc_html_e( 'Call Us', 'vtech-av' ); ?></a>
 	</div>
 </div>
 

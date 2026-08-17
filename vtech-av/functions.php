@@ -7,8 +7,8 @@
 
 if ( ! defined( 'ABSPATH' ) ) { exit; }
 
-define( 'VTECH_VERSION', '5.22.0' );
-define( 'VTECH_BUILD', 'v5-2026-07-04' );
+define( 'VTECH_VERSION', '5.23.0' );
+define( 'VTECH_BUILD', 'v5.23-2026-08-17' );
 define( 'VTECH_DIR', get_template_directory() );
 define( 'VTECH_URI', get_template_directory_uri() );
 
@@ -115,8 +115,8 @@ function vtech_assets() {
 	wp_localize_script( 'vtech-app', 'VTECH', array(
 		'ajaxUrl'   => admin_url( 'admin-ajax.php' ),
 		'nonce'     => wp_create_nonce( 'vtech_nonce' ),
-		'whatsapp'  => get_theme_mod( 'vtech_whatsapp', '254703201241' ),
-		'phone'     => get_theme_mod( 'vtech_phone', '+254 728135246' ),
+		'whatsapp'  => get_theme_mod( 'vtech_whatsapp', '254728135246' ),
+		'phone'     => get_theme_mod( 'vtech_phone', '+254 728 135 246' ),
 	) );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
@@ -199,7 +199,7 @@ add_action( 'after_switch_theme', function () {
  * resolve even when activation-time flushes don't take on a given host — no
  * need to visit Settings > Permalinks. It flushes at most once per version.
  */
-define( 'VTECH_REWRITE_VER', '25' );
+define( 'VTECH_REWRITE_VER', '26' );
 add_action( 'init', 'vtech_versioned_flush', 99999 );
 function vtech_versioned_flush() {
 	if ( get_option( 'vtech_rewrite_ver' ) !== VTECH_REWRITE_VER ) {
@@ -247,7 +247,7 @@ function vtech_force_page_templates( $template ) {
  * Lets customers book without filling a form.
  */
 function vtech_whatsapp_book_url( $post_id ) {
-	$wa = preg_replace( '/\\D+/', '', (string) get_theme_mod( 'vtech_whatsapp', '254703201241' ) );
+	$wa = preg_replace( '/\\D+/', '', (string) get_theme_mod( 'vtech_whatsapp', '254728135246' ) );
 	$title = get_the_title( $post_id );
 	$af    = function_exists( 'get_field' );
 	$price = $af ? get_field( 'price', $post_id ) : get_post_meta( $post_id, 'price', true );

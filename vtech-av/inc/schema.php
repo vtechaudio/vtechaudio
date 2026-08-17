@@ -18,7 +18,7 @@ function vtech_nap() {
 	return array(
 		'name'    => 'VTECH Audio Visual Solutions',
 		'email'   => get_theme_mod( 'vtech_email', 'info@vtechaudio.co.ke' ),
-		'phone'   => get_theme_mod( 'vtech_phone', '+254 728135246' ),
+		'phone'   => get_theme_mod( 'vtech_phone', '+254 728 135 246' ),
 		'street'  => get_theme_mod( 'vtech_address', 'Mpaka Plaza, Mpaka Road' ),
 		'locality'=> 'Nairobi',
 		'region'  => 'Nairobi County',
@@ -35,6 +35,8 @@ function vtech_json_ld( $data ) {
 }
 
 add_action( 'wp_head', function () {
+	// Rank Math (or another SEO plugin) owns the structured-data graph when active.
+	if ( function_exists( 'vtech_seo_plugin_active' ) && vtech_seo_plugin_active() ) { return; }
 	$nap = vtech_nap();
 	$logo = get_theme_mod( 'vtech_logo_url', VTECH_URI . '/assets/img/logo.png' );
 
@@ -111,31 +113,4 @@ add_action( 'wp_head', function () {
 		}
 	}
 
-	// Aggregate Review schema from testimonials (site-wide, homepage).
-	if ( is_front_page() ) {
-		$q = new WP_Query( array( 'post_type' => 'testimonial', 'posts_per_page' => 20, 'no_found_rows' => true ) );
-		if ( $q->have_posts() && function_exists( 'get_field' ) ) {
-			$reviews = array(); $sum = 0; $count = 0;
-			foreach ( $q->posts as $p ) {
-				$rating = (int) get_field( 'rating', $p->ID ) ?: 5;
-				$sum += $rating; $count++;
-				$reviews[] = array(
-					'@type' => 'Review',
-					'author' => array( '@type' => 'Person', 'name' => get_field( 'author', $p->ID ) ),
-					'reviewRating' => array( '@type' => 'Rating', 'ratingValue' => (string) $rating, 'bestRating' => '5' ),
-					'reviewBody' => wp_strip_all_tags( $p->post_content ),
-				);
-			}
-			if ( $count ) {
-				vtech_json_ld( array(
-					'@context' => 'https://schema.org',
-					'@type' => 'Organization',
-					'@id' => $nap['url'] . '#business',
-					'aggregateRating' => array( '@type' => 'AggregateRating', 'ratingValue' => number_format( $sum / $count, 1 ), 'reviewCount' => (string) $count, 'bestRating' => '5' ),
-					'review' => $reviews,
-				) );
-			}
-		}
-		wp_reset_postdata();
-	}
 }, 20 );

@@ -103,12 +103,12 @@ if ( ! empty( $vtc_clients ) ) : ?>
 		else :
 			// Fallback before setup: static cards with bundled images.
 			$fallback = array(
-				array( 'Professional Sound Systems', 'Line arrays, mixing and PA for churches, halls and stadiums.', 'sound-systems.webp', '/services/sound-systems/' ),
-				array( 'LED Screens & Video Walls', 'Indoor and outdoor LED display supply and installation.', 'led-screens.webp', '/services/led-screens/' ),
-				array( 'Conference & Boardroom AV', 'Video conferencing and one-touch meeting rooms.', 'conference-systems.webp', '/services/conference-systems/' ),
-				array( 'Stage & Architectural Lighting', 'Event and permanent lighting design and control.', 'stage-lighting.webp', '/services/lighting/' ),
-				array( 'Acoustic Design & Soundproofing', 'Room acoustics and noise control for clean audio.', 'acoustic-solutions.webp', '/services/acoustic-solutions/' ),
-				array( 'CCTV & Digital Signage', 'Security integration and signage networks.', 'video-systems.webp', '/services/video-systems/' ),
+				array( 'Professional Sound Systems', 'Line arrays, mixing and PA for churches, halls and stadiums.', 'sound-systems.webp', '/services/professional-sound-systems/' ),
+				array( 'LED Screens & Video Walls', 'Indoor and outdoor LED display supply and installation.', 'led-screens.webp', '/services/led-screens-video-walls/' ),
+				array( 'Conference & Boardroom AV', 'Video conferencing and one-touch meeting rooms.', 'conference-systems.webp', '/services/conference-boardroom-av/' ),
+				array( 'Stage & Architectural Lighting', 'Event and permanent lighting design and control.', 'stage-lighting.webp', '/services/stage-architectural-lighting/' ),
+				array( 'Acoustic Design & Soundproofing', 'Room acoustics and noise control for clean audio.', 'acoustic-solutions.webp', '/services/acoustic-design-soundproofing/' ),
+				array( 'CCTV & Digital Signage', 'Security integration and signage networks.', 'video-systems.webp', '/services/cctv-digital-signage/' ),
 			);
 			foreach ( $fallback as $f ) : ?>
 				<a class="card card--service" href="<?php echo esc_url( home_url( $f[3] ) ); ?>">
@@ -130,15 +130,15 @@ if ( ! empty( $vtc_clients ) ) : ?>
 		<div class="card-grid card-grid--3">
 		<?php
 		$industries = array(
-			array( 'Churches', 'Church sound systems Kenya', 'industry-churches.webp', '/industry/churches/' ),
-			array( 'Hotels & Hospitality', 'Hotel audio visual solutions Kenya', 'industry-hotels.webp', '/industry/hotels/' ),
-			array( 'Schools & Universities', 'School PA systems Kenya', 'industry-education.webp', '/industry/education/' ),
-			array( 'Corporates', 'Boardroom AV solutions Nairobi', 'industry-corporate.webp', '/industry/corporate/' ),
-			array( 'Government', 'Conference systems Kenya', 'industry-government.webp', '/industry/government/' ),
-			array( 'Media Houses', 'Broadcast & live streaming', 'industry-media.webp', '/industry/media/' ),
-			array( 'Hospitals & Healthcare', 'Nurse call & PA systems Kenya', 'industry-healthcare.webp', '/industry/healthcare/' ),
-			array( 'Conference Centres', 'Delegate & conference systems', 'industry-conference-centres.webp', '/industry/conference-centres/' ),
-			array( 'Event Organisers', 'Sound & lighting hire Kenya', 'industry-events.webp', '/industry/events/' ),
+			array( 'Churches', 'Church sound systems Kenya', 'industry-churches.webp', '/industries/churches/' ),
+			array( 'Hotels & Hospitality', 'Hotel audio visual solutions Kenya', 'industry-hotels.webp', '/industries/hotels/' ),
+			array( 'Schools & Universities', 'School PA systems Kenya', 'industry-education.webp', '/industries/education/' ),
+			array( 'Corporates', 'Boardroom AV solutions Nairobi', 'industry-corporate.webp', '/industries/corporate/' ),
+			array( 'Government', 'Conference systems Kenya', 'industry-government.webp', '/industries/government/' ),
+			array( 'Media Houses', 'Broadcast & live streaming', 'industry-media.webp', '/industries/media/' ),
+			array( 'Hospitals & Healthcare', 'Nurse call & PA systems Kenya', 'industry-healthcare.webp', '/industries/healthcare/' ),
+			array( 'Conference Centres', 'Delegate & conference systems', 'industry-conference-centres.webp', '/industries/conference-centres/' ),
+			array( 'Event Organisers', 'Sound & lighting hire Kenya', 'industry-events.webp', '/industries/events/' ),
 		);
 		// Homepage shows a curated, fixed set (default 9). Filterable if you ever want to change it.
 		$ind_limit = (int) apply_filters( 'vtech_home_industries_limit', 9 );
@@ -157,7 +157,7 @@ if ( ! empty( $vtc_clients ) ) : ?>
 </section>
 
 <!-- ============ STATS ============ -->
-<section class="section" style="background:linear-gradient(135deg,#0A4FA3,#083C7C)">
+<section class="section" style="background:linear-gradient(135deg,#81007F,#5C005A)">
 	<div class="container">
 		<div class="stats">
 			<?php
@@ -178,7 +178,7 @@ if ( ! empty( $vtc_clients ) ) : ?>
 				if ( '' === $vtc_count ) : ?>
 					<div class="stat"><div class="stat__num"><?php echo esc_html( $vtc_raw ); ?></div><div class="stat__label"><?php echo esc_html( $vtc_lbl ); ?></div></div>
 				<?php else : ?>
-					<div class="stat"><div class="stat__num" data-countup="<?php echo esc_attr( $vtc_count ); ?>" data-suffix="<?php echo esc_attr( $vtc_suffix ); ?>">0</div><div class="stat__label"><?php echo esc_html( $vtc_lbl ); ?></div></div>
+					<div class="stat"><div class="stat__num" data-countup="<?php echo esc_attr( $vtc_count ); ?>" data-suffix="<?php echo esc_attr( $vtc_suffix ); ?>"><?php echo esc_html( $vtc_count . $vtc_suffix ); ?></div><div class="stat__label"><?php echo esc_html( $vtc_lbl ); ?></div></div>
 				<?php endif;
 			endforeach; ?>
 		</div>

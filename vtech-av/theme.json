@@ -67,7 +67,7 @@
       "gradients": [
         {
           "slug": "hero",
-          "gradient": "linear-gradient(135deg, #0A4FA3 0%, #083C7C 60%, #062E60 100%)",
+          "gradient": "linear-gradient(135deg, #81007F 0%, #5C005A 60%, #3E003D 100%)",
           "name": "Hero Blue"
         },
         {

@@ -18,6 +18,12 @@ function vtech_meta_description() {
 		$d = has_excerpt() ? get_the_excerpt() : wp_trim_words( wp_strip_all_tags( get_post_field( 'post_content' ) ), 30 );
 	} elseif ( is_post_type_archive( 'service' ) ) {
 		$d = 'Professional audio visual services in Kenya — sound systems, LED screens, stage lighting, conference systems, acoustic treatment and installation by VTECH.';
+	} elseif ( is_post_type_archive( 'project' ) ) {
+		$d = 'Featured audio visual installation projects across Kenya by VTECH — sound systems, LED screens, conference AV, stage lighting and acoustics.';
+	} elseif ( is_post_type_archive( 'industry' ) ) {
+		$d = 'AV solutions by sector in Kenya — churches, hotels, schools, corporates, government and healthcare — designed, installed and supported by VTECH.';
+	} elseif ( is_post_type_archive( 'equipment' ) || is_post_type_archive( 'hire_package' ) ) {
+		$d = 'Audio visual equipment hire in Nairobi and across Kenya — sound systems, PA, LED screens, lighting and conference gear with delivery, setup and technical support.';
 	} elseif ( is_front_page() ) {
 		$d = 'VTECH Audio Visual Solutions — Kenya\'s premium AV company. Professional sound systems, LED screens, conference & PA systems, stage lighting, acoustics, CCTV and equipment hire. Get a quote in 24 hours.';
 	} else {

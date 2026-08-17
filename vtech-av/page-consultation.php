@@ -78,7 +78,7 @@ get_header();
 
 		<p class="cform__alt" style="text-align:center;margin-top:1.5rem;color:var(--c-muted)">
 			<?php esc_html_e( 'Prefer to talk? Call or WhatsApp us on', 'vtech-av' ); ?>
-			<a href="tel:<?php echo esc_attr( str_replace( ' ', '', vtech_opt( 'vtech_phone', '+254 728135246' ) ) ); ?>"><?php echo esc_html( vtech_opt( 'vtech_phone', '+254 728135246' ) ); ?></a>.
+			<a href="tel:<?php echo esc_attr( str_replace( ' ', '', vtech_opt( 'vtech_phone', '+254 728 135 246' ) ) ); ?>"><?php echo esc_html( vtech_opt( 'vtech_phone', '+254 728 135 246' ) ); ?></a>.
 		</p>
 	</form>
 </div></section>

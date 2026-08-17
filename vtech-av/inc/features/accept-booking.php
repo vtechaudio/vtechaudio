@@ -130,7 +130,7 @@ add_action( 'template_redirect', function () {
 	wp_mail( $to, "[ACCEPTED] {$ref} — booking confirmed", $owner_body, array( 'Content-Type: text/plain; charset=UTF-8' ) );
 
 	if ( ! empty( $client['email'] ) && $invoice_id ) {
-		$cbody = "Hello " . ( $client['name'] ?? '' ) . ",\n\nThank you for accepting quote {$ref}. Your booking is reserved for {$start} to {$end}.\n\nTo confirm, please pay the deposit shown on your invoice:\n" . vtech_doc_url( $invoice_id ) . "\n\nRegards,\nVTECH Audio Visual Solutions\n" . get_theme_mod( 'vtech_phone', '+254 728135246' );
+		$cbody = "Hello " . ( $client['name'] ?? '' ) . ",\n\nThank you for accepting quote {$ref}. Your booking is reserved for {$start} to {$end}.\n\nTo confirm, please pay the deposit shown on your invoice:\n" . vtech_doc_url( $invoice_id ) . "\n\nRegards,\nVTECH Audio Visual Solutions\n" . get_theme_mod( 'vtech_phone', '+254 728 135 246' );
 		wp_mail( $client['email'], "Booking reserved — deposit invoice {$ref}", $cbody, array( 'Content-Type: text/plain; charset=UTF-8' ) );
 	}
 

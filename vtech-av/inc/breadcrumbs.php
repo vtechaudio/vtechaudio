@@ -16,6 +16,14 @@ function vtech_breadcrumbs() {
 		$items[] = array( 'name' => 'Services', 'url' => get_post_type_archive_link( 'service' ) );
 	} elseif ( is_singular( 'project' ) || is_post_type_archive( 'project' ) ) {
 		$items[] = array( 'name' => 'Projects', 'url' => get_post_type_archive_link( 'project' ) );
+	} elseif ( is_singular( 'industry' ) || is_post_type_archive( 'industry' ) ) {
+		$items[] = array( 'name' => 'Industries', 'url' => get_post_type_archive_link( 'industry' ) );
+	} elseif ( is_singular( 'case_study' ) || is_post_type_archive( 'case_study' ) ) {
+		$items[] = array( 'name' => 'Case Studies', 'url' => get_post_type_archive_link( 'case_study' ) );
+	} elseif ( is_singular( 'equipment' ) || is_post_type_archive( 'equipment' ) ) {
+		$items[] = array( 'name' => 'Equipment Hire', 'url' => get_post_type_archive_link( 'equipment' ) );
+	} elseif ( is_singular( 'hire_package' ) || is_post_type_archive( 'hire_package' ) ) {
+		$items[] = array( 'name' => 'Hire Packages', 'url' => get_post_type_archive_link( 'hire_package' ) );
 	} elseif ( is_singular( 'post' ) || is_home() ) {
 		$items[] = array( 'name' => 'Blog', 'url' => get_permalink( get_option( 'page_for_posts' ) ) );
 	}
@@ -38,7 +46,8 @@ function vtech_breadcrumbs() {
 	}
 	echo '</ol></nav>';
 
-	// Schema.
+	// Schema — Rank Math (or another SEO plugin) owns BreadcrumbList when active.
+	if ( function_exists( 'vtech_seo_plugin_active' ) && vtech_seo_plugin_active() ) { return; }
 	$ld = array( '@context' => 'https://schema.org', '@type' => 'BreadcrumbList', 'itemListElement' => array() );
 	foreach ( $items as $i => $item ) {
 		$ld['itemListElement'][] = array( '@type' => 'ListItem', 'position' => $i + 1, 'name' => $item['name'], 'item' => $item['url'] );

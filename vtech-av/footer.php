@@ -18,7 +18,7 @@ if ( ! defined( 'ABSPATH' ) ) { exit; }
 			<address>
 				<strong>VTECH Audio Visual Solutions</strong><br>
 				<?php echo esc_html( vtech_opt( 'vtech_address', 'Mpaka Plaza, Mpaka Road, Nairobi' ) ); ?><br>
-				<a href="tel:<?php echo esc_attr( str_replace( ' ', '', vtech_opt( 'vtech_phone', '+254 728135246' ) ) ); ?>"><?php echo esc_html( vtech_opt( 'vtech_phone', '+254 728135246' ) ); ?></a><br>
+				<a href="tel:<?php echo esc_attr( str_replace( ' ', '', vtech_opt( 'vtech_phone', '+254 728 135 246' ) ) ); ?>"><?php echo esc_html( vtech_opt( 'vtech_phone', '+254 728 135 246' ) ); ?></a><br>
 				<a href="mailto:<?php echo esc_attr( vtech_opt( 'vtech_email', 'info@vtechaudio.co.ke' ) ); ?>"><?php echo esc_html( vtech_opt( 'vtech_email', 'info@vtechaudio.co.ke' ) ); ?></a><br>
 				<span><?php echo esc_html( vtech_opt( 'vtech_hours', 'Mon–Fri, 9:00 AM – 6:00 PM' ) ); ?></span>
 			</address>
@@ -89,12 +89,12 @@ if ( ! defined( 'ABSPATH' ) ) { exit; }
 </footer>
 
 <?php // Floating conversion elements.
-$wa = str_replace( ' ', '', vtech_opt( 'vtech_whatsapp', '254703201241' ) );
+$wa = str_replace( ' ', '', vtech_opt( 'vtech_whatsapp', '254728135246' ) );
 if ( vtech_opt( 'vtech_show_whatsapp', true ) ) : ?>
 	<a class="float-btn float-btn--wa" href="https://wa.me/<?php echo esc_attr( $wa ); ?>" target="_blank" rel="noopener" aria-label="<?php esc_attr_e( 'Chat on WhatsApp', 'vtech-av' ); ?>">WhatsApp</a>
 <?php endif;
 if ( vtech_opt( 'vtech_show_call', true ) ) : ?>
-	<a class="float-btn float-btn--call" href="tel:<?php echo esc_attr( str_replace( ' ', '', vtech_opt( 'vtech_phone', '+254 728135246' ) ) ); ?>" aria-label="<?php esc_attr_e( 'Call VTECH', 'vtech-av' ); ?>">Call</a>
+	<a class="float-btn float-btn--call" href="tel:<?php echo esc_attr( str_replace( ' ', '', vtech_opt( 'vtech_phone', '+254 728 135 246' ) ) ); ?>" aria-label="<?php esc_attr_e( 'Call VTECH', 'vtech-av' ); ?>">Call</a>
 <?php endif;
 
 if ( vtech_opt( 'vtech_show_sticky_cta', true ) ) : ?>
