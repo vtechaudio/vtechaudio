@@ -25,6 +25,8 @@ get_header();
 		<input type="hidden" name="form_kind" value="hire">
 		<input type="hidden" name="_vtech_return" value="<?php echo esc_url( get_permalink() ); ?>">
 		<?php wp_nonce_field( 'vtech_form', 'vtech_form_nonce' ); ?>
+					<p class="vtech-hp" aria-hidden="true"><label>Leave this field empty<input type="text" name="website" tabindex="-1" autocomplete="off"></label></p>
+					<input type="hidden" name="vtech_ts" value="<?php echo esc_attr( time() ); ?>">
 		<div class="cform__progress" aria-hidden="true"><div class="cform__bar" data-cform-bar></div></div>
 		<p class="cform__stepnote" data-cform-note>Step 1 of 3</p>
 

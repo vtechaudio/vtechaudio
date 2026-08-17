@@ -42,6 +42,8 @@ $to = vtech_opt( 'vtech_email', 'info@vtechaudio.co.ke' );
 					<input type="hidden" name="form_kind" value="quote">
 					<input type="hidden" name="_vtech_return" value="<?php echo esc_url( get_permalink() ); ?>">
 					<?php wp_nonce_field( 'vtech_form', 'vtech_form_nonce' ); ?>
+					<p class="vtech-hp" aria-hidden="true"><label>Leave this field empty<input type="text" name="website" tabindex="-1" autocomplete="off"></label></p>
+					<input type="hidden" name="vtech_ts" value="<?php echo esc_attr( time() ); ?>">
 					<div><label for="qf-name"><?php esc_html_e( 'Full name *', 'vtech-av' ); ?></label><input id="qf-name" name="name" type="text" required></div>
 					<div><label for="qf-email"><?php esc_html_e( 'Email *', 'vtech-av' ); ?></label><input id="qf-email" name="email" type="email" required></div>
 					<div><label for="qf-phone"><?php esc_html_e( 'Phone', 'vtech-av' ); ?></label><input id="qf-phone" name="phone" type="tel"></div>

@@ -39,3 +39,43 @@ add_filter( 'login_errors', function () { return __( 'Invalid credentials.', 'vt
 
 // NOTE: header() security headers and DISALLOW_FILE_EDIT removed on purpose.
 // Add security headers via .htaccess or a security plugin if desired.
+
+
+/* -------------------------------------------------------------------------
+ * Extended hardening (v5.28.0): safe response headers, file-editor lockdown,
+ * and user/author enumeration blocks. All applied via WordPress filters/hooks
+ * (never raw header()), so they cannot cause "headers already sent" errors.
+ * ------------------------------------------------------------------------- */
+
+// Safe security response headers (applied by WP through the wp_headers filter).
+add_filter( 'wp_headers', function ( $headers ) {
+	$headers['X-Content-Type-Options'] = 'nosniff';
+	$headers['X-Frame-Options']        = 'SAMEORIGIN';
+	$headers['Referrer-Policy']        = 'strict-origin-when-cross-origin';
+	$headers['Permissions-Policy']     = 'geolocation=(), microphone=(), camera=(), interest-cohort=()';
+	if ( function_exists( 'is_ssl' ) && is_ssl() ) {
+		$headers['Strict-Transport-Security'] = 'max-age=31536000; includeSubDomains';
+	}
+	return $headers;
+} );
+
+// Disable the built-in Theme/Plugin File Editor (a common privilege-escalation vector).
+if ( ! defined( 'DISALLOW_FILE_EDIT' ) ) { define( 'DISALLOW_FILE_EDIT', true ); }
+
+// Block REST API user enumeration for logged-out visitors.
+add_filter( 'rest_endpoints', function ( $endpoints ) {
+	if ( ! is_user_logged_in() ) {
+		if ( isset( $endpoints['/wp/v2/users'] ) ) { unset( $endpoints['/wp/v2/users'] ); }
+		if ( isset( $endpoints['/wp/v2/users/(?P<id>[\d]+)'] ) ) { unset( $endpoints['/wp/v2/users/(?P<id>[\d]+)'] ); }
+	}
+	return $endpoints;
+} );
+
+// Block ?author=N and /author/ archive enumeration on the public front end.
+add_action( 'template_redirect', function () {
+	if ( is_admin() ) { return; }
+	if ( ( isset( $_GET['author'] ) || is_author() ) && ! is_user_logged_in() ) {
+		wp_safe_redirect( home_url( '/' ), 301 );
+		exit;
+	}
+} );

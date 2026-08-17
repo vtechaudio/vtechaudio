@@ -282,6 +282,17 @@ function vtech_rest_submit( $request ) {
 add_action( 'admin_post_vtech_form', 'vtech_handle_form_post' );
 add_action( 'admin_post_nopriv_vtech_form', 'vtech_handle_form_post' );
 function vtech_handle_form_post() {
+	// Spam guard: honeypot field ("website") + submit-time trap. Bots fill hidden
+	// fields and often submit instantly. On a hit we redirect as if it succeeded
+	// (so the bot does not retry) but save nothing.
+	$vtc_hp = isset( $_POST['website'] ) ? trim( (string) wp_unslash( $_POST['website'] ) ) : '';
+	$vtc_ts = isset( $_POST['vtech_ts'] ) ? (int) $_POST['vtech_ts'] : 0;
+	if ( '' !== $vtc_hp || ( $vtc_ts && ( time() - $vtc_ts ) < 2 ) ) {
+		$vtc_r = isset( $_POST['_vtech_return'] ) ? esc_url_raw( wp_unslash( $_POST['_vtech_return'] ) ) : home_url( '/' );
+		if ( ! $vtc_r || 0 !== strpos( $vtc_r, home_url() ) ) { $vtc_r = home_url( '/' ); }
+		wp_safe_redirect( $vtc_r . ( ( false === strpos( $vtc_r, '?' ) ) ? '?' : '&' ) . 'vtech_sent=1#vtech-form-top' );
+		exit;
+	}
 	$kind   = isset( $_POST['form_kind'] ) ? sanitize_key( wp_unslash( $_POST['form_kind'] ) ) : 'consultation';
 	$return = isset( $_POST['_vtech_return'] ) ? esc_url_raw( wp_unslash( $_POST['_vtech_return'] ) ) : home_url( '/' );
 	$ref    = '';

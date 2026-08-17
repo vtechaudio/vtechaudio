@@ -317,3 +317,6 @@ body.nav-open{overflow:hidden}
 /* Form success banner (Post/Redirect/Get) */
 .cf-success-banner{background:#f2fbf5;border:1px solid #1a8a4a;border-left:4px solid #1a8a4a;color:#14663a;padding:1rem 1.25rem;border-radius:10px;margin:0 0 1.5rem;line-height:1.5;font-size:.98rem}
 .cf-success-banner strong{color:#0f5a30}
+
+/* Anti-spam honeypot (visually hidden, off-screen). */
+.vtech-hp{position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden}

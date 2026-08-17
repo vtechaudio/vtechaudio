@@ -15,6 +15,8 @@ function vtech_nap() {
 		$vtc_su = get_theme_mod( $vtc_sk, '' );
 		if ( $vtc_su ) { $same[] = $vtc_su; }
 	}
+	$vtc_wa = preg_replace( '/\D+/', '', (string) get_theme_mod( 'vtech_whatsapp', '254728135246' ) );
+	if ( $vtc_wa ) { $same[] = 'https://wa.me/' . $vtc_wa; }
 	return array(
 		'name'    => 'VTECH Audio Visual Solutions',
 		'email'   => get_theme_mod( 'vtech_email', 'info@vtechaudio.co.ke' ),
@@ -44,7 +46,7 @@ add_action( 'wp_head', function () {
 	// Organization + LocalBusiness (site-wide).
 	vtech_json_ld( array(
 		'@context' => 'https://schema.org',
-		'@type'    => array( 'Organization', 'LocalBusiness', 'ElectronicsStore' ),
+		'@type'    => array( 'Organization', 'ProfessionalService', 'LocalBusiness' ),
 		'@id'      => $nap['url'] . '#business',
 		'name'     => $nap['name'],
 		'url'      => $nap['url'],
@@ -66,6 +68,16 @@ add_action( 'wp_head', function () {
 			array( '@type' => 'Country', 'name' => 'Kenya' ),
 			array( '@type' => 'Place', 'name' => 'East Africa' ),
 		),
+		'foundingDate' => '2021',
+		'knowsAbout' => array( 'Audio visual installation', 'Professional sound systems', 'PA systems', 'LED screens and video walls', 'Conference and boardroom AV', 'Video conferencing', 'Stage and architectural lighting', 'Acoustic treatment and soundproofing', 'Digital signage', 'AV consultation and system design' ),
+		'contactPoint' => array(
+			'@type' => 'ContactPoint',
+			'telephone' => $nap['phone'],
+			'email' => $nap['email'],
+			'contactType' => 'sales',
+			'areaServed' => 'KE',
+			'availableLanguage' => array( 'en', 'sw' ),
+		),
 		'openingHours' => $nap['hours'],
 		'sameAs' => $nap['sameAs'],
 		'slogan' => 'Kenya\'s premium audio-visual integrator — designed, installed and supported.',
@@ -85,6 +97,24 @@ add_action( 'wp_head', function () {
 	) );
 
 	// Service schema on single service.
+	if ( is_singular( 'project' ) ) {
+		$img_url = has_post_thumbnail() ? get_the_post_thumbnail_url( get_the_ID(), 'vtech-og' ) : $logo;
+		$proj = array(
+			'@context' => 'https://schema.org',
+			'@type'    => 'CreativeWork',
+			'name'     => get_the_title(),
+			'headline' => get_the_title(),
+			'description' => wp_strip_all_tags( get_the_excerpt() ),
+			'image'    => $img_url,
+			'url'      => get_permalink(),
+			'dateCreated' => get_the_date( 'c' ),
+			'creator'  => array( '@type' => 'Organization', 'name' => $nap['name'], '@id' => $nap['url'] . '#business' ),
+			'about'    => 'Audio visual installation project by VTECH Audio Visual Solutions in Kenya',
+			'locationCreated' => array( '@type' => 'Place', 'address' => array( '@type' => 'PostalAddress', 'addressLocality' => $nap['locality'], 'addressCountry' => 'KE' ) ),
+		);
+		vtech_json_ld( $proj );
+	}
+
 	if ( is_singular( 'service' ) ) {
 		$id = get_the_ID();
 		$price = function_exists( 'get_field' ) ? get_field( 'price_from', $id ) : '';

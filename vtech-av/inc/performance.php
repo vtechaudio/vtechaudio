@@ -15,6 +15,7 @@ add_action( 'wp_head', function () {
 	$f = VTECH_URI . '/assets/fonts/';
 	echo '<link rel="preload" href="' . esc_url( $f . 'manrope-var.woff2' ) . '" as="font" type="font/woff2" crossorigin>' . "\n";
 	echo '<link rel="preload" href="' . esc_url( $f . 'inter-var.woff2' ) . '" as="font" type="font/woff2" crossorigin>' . "\n";
+	echo '<style id="vtech-fonts">@font-face{font-family:Manrope;font-style:normal;font-weight:200 800;font-display:swap;src:url(' . esc_url( $f . 'manrope-var.woff2' ) . ') format("woff2");}@font-face{font-family:Inter;font-style:normal;font-weight:100 900;font-display:swap;src:url(' . esc_url( $f . 'inter-var.woff2' ) . ') format("woff2");}</style>';
 	// Preload the LCP hero image on the homepage.
 	if ( is_front_page() ) {
 		$hero = get_theme_mod( 'vtech_hero_img', VTECH_URI . '/assets/img/hero.webp' );
@@ -33,6 +34,8 @@ add_action( 'wp_head', function () {
 "; }
 	}
 	if ( $css ) {
+		$css = preg_replace( '#/\*.*?\*/#s', '', $css );
+		$css = trim( preg_replace( '/\s+/', ' ', $css ) );
 		echo '<style id="vtech-inline-css">' . $css . '</style>' . "
 "; // phpcs:ignore
 	}
