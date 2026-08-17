@@ -30,8 +30,8 @@
 /* ---------- Glass stat cards ---------- */
 .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:1.5rem}
 .stat{padding:2rem 1.5rem;border-radius:var(--r);text-align:center;background:linear-gradient(135deg,rgba(255,255,255,.14),rgba(255,255,255,.04));border:1px solid rgba(255,255,255,.18);backdrop-filter:blur(10px);color:#fff}
-.stat__num{font-family:var(--font-h);font-weight:800;font-size:2.75rem;color:var(--c-accent);line-height:1}
-.stat__label{font-size:.9rem;color:#d6e2f4}
+.stat__num{font-family:var(--font-h);font-weight:800;font-size:2.75rem;color:#fff;line-height:1}
+.stat__label{font-size:.9rem;color:#f0dcef}
 
 /* ---------- CTA band ---------- */
 .cta-band{background:linear-gradient(135deg,#81007F,#5C005A);color:#fff;border-radius:24px;margin-inline:clamp(1rem,5vw,2rem)}

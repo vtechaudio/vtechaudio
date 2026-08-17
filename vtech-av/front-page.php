@@ -19,6 +19,23 @@ if ( ! function_exists( 'vtech_opt' ) ) {
 }
 if ( ! defined( 'VTECH_URI' ) ) { define( 'VTECH_URI', get_template_directory_uri() ); }
 
+if ( ! function_exists( 'vtech_service_fallback_img' ) ) {
+	function vtech_service_fallback_img( $slug ) {
+		$slug = strtolower( (string) $slug );
+		$map = array(
+			'sound' => 'sound-systems.webp', 'led' => 'led-screens.webp', 'screen' => 'led-screens.webp',
+			'video-wall' => 'led-screens.webp', 'conference' => 'conference-systems.webp', 'boardroom' => 'conference-systems.webp',
+			'light' => 'stage-lighting.webp', 'acoustic' => 'acoustic-solutions.webp',
+			'signage' => 'video-systems.webp', 'display' => 'video-systems.webp', 'video-system' => 'video-systems.webp',
+			'consult' => 'consultation.webp', 'design' => 'consultation.webp',
+		);
+		foreach ( $map as $needle => $file ) {
+			if ( false !== strpos( $slug, $needle ) ) { return $file; }
+		}
+		return 'og-default.webp';
+	}
+}
+
 $img = VTECH_URI . '/assets/img/';
 ?>
 
@@ -94,6 +111,8 @@ if ( ! empty( $vtc_clients ) ) : ?>
 				<a class="card card--service" href="<?php the_permalink(); ?>">
 					<?php if ( has_post_thumbnail() ) : ?>
 						<figure class="card__media"><?php the_post_thumbnail( 'vtech-card', array( 'loading' => 'lazy' ) ); ?></figure>
+					<?php else : ?>
+						<figure class="card__media"><img src="<?php echo esc_url( $img . vtech_service_fallback_img( get_post_field( 'post_name', get_the_ID() ) ) ); ?>" alt="<?php echo esc_attr( get_the_title() ); ?> in Kenya" loading="lazy" decoding="async"></figure>
 					<?php endif; ?>
 					<h3 class="card__title"><?php the_title(); ?></h3>
 					<p class="card__excerpt"><?php echo esc_html( wp_trim_words( get_the_excerpt(), 16 ) ); ?></p>
