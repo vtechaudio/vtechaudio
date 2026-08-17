@@ -51,7 +51,7 @@ get_header();
 		<fieldset class="cform__step" data-step="2">
 			<legend><?php esc_html_e( '2. What you need', 'vtech-av' ); ?></legend>
 			<div class="cf-grid">
-				<?php vtc_checks( 'Which systems are you interested in?', 'systems', array( 'Sound / PA', 'LED Screens & Video', 'Conference / Boardroom', 'Stage Lighting', 'Acoustic Treatment', 'CCTV / Digital Signage', 'Live Streaming', 'Equipment Hire' ) ); ?>
+				<?php vtc_checks( 'Which systems are you interested in?', 'systems', array( 'Sound / PA', 'LED Screens & Video', 'Conference / Boardroom', 'Stage Lighting', 'Acoustic Treatment', 'Digital Signage', 'Live Streaming', 'Equipment Hire' ) ); ?>
 				<?php vtc_radios( 'Is this a new installation or an upgrade?', 'install_type', array( 'New installation', 'Upgrade / expansion', 'Repair / maintenance', 'Not sure yet' ) ); ?>
 				<?php vtc_radios( 'Approximate budget (KES)', 'budget', array( 'Under 500,000', '500,000 – 2M', '2M – 5M', 'Above 5M', 'Not sure yet' ) ); ?>
 				<?php vtc_field( 'Tell us briefly about your project', 'project_desc', 'textarea', false, 'e.g. Sound and LED for a 500-seat church, or 4 boardrooms for our office.' ); ?>

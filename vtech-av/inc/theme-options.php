@@ -46,7 +46,7 @@ add_action( 'customize_register', function ( $wp_customize ) {
 	$wp_customize->add_section( 'vtech_hero', array( 'title' => 'Homepage Hero', 'panel' => 'vtech_panel' ) );
 	$wp_customize->add_setting( 'vtech_hero_title', array( 'default' => 'Kenya\'s Premium Audio Visual Company', 'sanitize_callback' => 'sanitize_text_field' ) );
 	$wp_customize->add_control( 'vtech_hero_title', array( 'label' => 'Hero Title', 'section' => 'vtech_hero', 'type' => 'text' ) );
-	$wp_customize->add_setting( 'vtech_hero_sub', array( 'default' => 'Sound, LED screens, stage lighting, conference & PA systems, acoustics and CCTV — designed, installed and supported across Kenya and East Africa.', 'sanitize_callback' => 'sanitize_textarea_field' ) );
+	$wp_customize->add_setting( 'vtech_hero_sub', array( 'default' => 'Sound, LED screens, stage lighting, conference & PA systems, acoustics and digital signage — designed, installed and supported across Kenya and East Africa.', 'sanitize_callback' => 'sanitize_textarea_field' ) );
 	$wp_customize->add_control( 'vtech_hero_sub', array( 'label' => 'Hero Subtitle', 'section' => 'vtech_hero', 'type' => 'textarea' ) );
 	$wp_customize->add_setting( 'vtech_hero_img', array( 'default' => VTECH_URI . '/assets/img/hero.webp', 'sanitize_callback' => 'esc_url_raw' ) );
 	$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'vtech_hero_img', array( 'label' => 'Hero Image (LCP)', 'section' => 'vtech_hero' ) ) );
@@ -82,7 +82,7 @@ add_action( 'customize_register', function ( $wp_customize ) {
 
 	/* --- Footer --- */
 	$wp_customize->add_section( 'vtech_footer', array( 'title' => 'Footer', 'panel' => 'vtech_panel' ) );
-	$wp_customize->add_setting( 'vtech_footer_blurb', array( 'default' => "Kenya's premium audio-visual integrator. Sound, LED, lighting, conference & PA systems, acoustics and CCTV designed, installed and supported across Kenya and East Africa.", 'sanitize_callback' => 'sanitize_textarea_field' ) );
+	$wp_customize->add_setting( 'vtech_footer_blurb', array( 'default' => "Kenya's premium audio-visual integrator. Sound, LED, lighting, conference & PA systems, acoustics and digital signage designed, installed and supported across Kenya and East Africa.", 'sanitize_callback' => 'sanitize_textarea_field' ) );
 	$wp_customize->add_control( 'vtech_footer_blurb', array( 'label' => 'Footer description', 'section' => 'vtech_footer', 'type' => 'textarea' ) );
 	$wp_customize->add_setting( 'vtech_footer_copyright', array( 'default' => 'VTECH Audio Visual Solutions. All rights reserved.', 'sanitize_callback' => 'sanitize_text_field' ) );
 	$wp_customize->add_control( 'vtech_footer_copyright', array( 'label' => 'Copyright text (year is added automatically)', 'section' => 'vtech_footer', 'type' => 'text' ) );

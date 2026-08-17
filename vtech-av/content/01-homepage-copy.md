@@ -5,14 +5,14 @@
 > uses the target local keywords naturally.
 
 **SEO title:** Audio Visual Company in Kenya | VTECH — Sound, LED, Lighting & Conference Systems
-**Meta description:** VTECH Audio Visual Solutions is Kenya's premium AV company — professional sound systems, LED screens, conference & PA systems, stage lighting, acoustics and CCTV. Free site survey. Get a quote in 24 hours.
+**Meta description:** VTECH Audio Visual Solutions is Kenya's premium AV company — professional sound systems, LED screens, conference & PA systems, stage lighting, acoustics and digital signage. Free site survey. Get a quote in 24 hours.
 
 ---
 
 ## 1. Hero
 **Eyebrow:** Audio Visual Company · Kenya & East Africa
 **H1:** Kenya's Premium Audio Visual Company
-**Sub:** Professional sound systems, LED screens, stage lighting, conference & PA systems, acoustic treatment and CCTV — designed, installed and supported for organisations across Kenya.
+**Sub:** Professional sound systems, LED screens, stage lighting, conference & PA systems, acoustic treatment and digital signage — designed, installed and supported for organisations across Kenya.
 **Primary CTA:** Get a Quote in 24 Hours
 **Secondary CTA:** See Our Projects
 **Trust row:** 200+ installations across Kenya · Free site survey · 12-month support
@@ -29,7 +29,7 @@
 - **Conference Systems Kenya** — Video conferencing, room automation and one-touch meeting rooms.
 - **Stage Lighting Kenya** — Event and permanent lighting design, rigging and control.
 - **Acoustic Solutions Kenya** — Room acoustics, treatment and soundproofing for clean, clear audio.
-- **CCTV & Digital Signage Kenya** — Security integration and signage networks.
+- **Digital Signage & Displays Kenya** — Indoor and outdoor digital signage and professional display networks.
 
 ## 4. Industries Served
 **H2:** AV Solutions for Every Sector in Kenya

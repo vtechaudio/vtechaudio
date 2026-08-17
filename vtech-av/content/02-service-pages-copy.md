@@ -38,4 +38,4 @@ Case Study → Gallery → FAQ → Related → CTA. Copy below is production-rea
 **Intro:** Boardroom AV solutions in Nairobi shouldn't need an IT technician to start a call. VTECH builds conference rooms where one button connects the display, camera, microphones and video-conferencing platform — reliable every time, for every user.
 **Benefits:** One-touch join · Room-filling microphone pickup · Zoom/Teams/Meet ready · Central room management · Predictable support.
 
-*(Repeat the same structure for: Stage & Architectural Lighting, Acoustic Design & Soundproofing, PA / Public Address Systems, CCTV Integration, Digital Signage, Live Streaming, Video Conferencing, Equipment Rental, Consultation, Installation, Maintenance, Training.)*
+*(Repeat the same structure for: Stage & Architectural Lighting, Acoustic Design & Soundproofing, PA / Public Address Systems, Digital Signage, Live Streaming, Video Conferencing, Equipment Rental, Consultation, Installation, Maintenance, Training.)*

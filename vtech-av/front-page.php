@@ -28,7 +28,7 @@ $img = VTECH_URI . '/assets/img/';
 	<div class="container hero__inner">
 		<p class="hero__eyebrow"><?php esc_html_e( 'Audio Visual Company · Kenya & East Africa', 'vtech-av' ); ?></p>
 		<h1 id="hero-title" class="hero__title"><?php echo esc_html( vtech_opt( 'vtech_hero_title', "Kenya's Premium Audio Visual Company" ) ); ?></h1>
-		<p class="hero__sub"><?php echo esc_html( vtech_opt( 'vtech_hero_sub', 'Sound systems, LED screens, stage lighting, conference & PA systems, acoustics and CCTV — designed, installed and supported for organisations across Kenya.' ) ); ?></p>
+		<p class="hero__sub"><?php echo esc_html( vtech_opt( 'vtech_hero_sub', 'Sound systems, LED screens, stage lighting, conference & PA systems, acoustics and digital signage — designed, installed and supported for organisations across Kenya.' ) ); ?></p>
 		<div class="hero__cta">
 			<a class="btn btn--accent btn--lg" href="<?php echo esc_url( home_url( '/consultation/' ) ); ?>"><?php esc_html_e( 'Book a Consultation', 'vtech-av' ); ?></a>
 			<a class="btn btn--ghost btn--lg" href="<?php echo esc_url( get_post_type_archive_link( 'project' ) ?: home_url( '/projects/' ) ); ?>"><?php esc_html_e( 'See Our Projects', 'vtech-av' ); ?></a>
@@ -108,7 +108,7 @@ if ( ! empty( $vtc_clients ) ) : ?>
 				array( 'Conference & Boardroom AV', 'Video conferencing and one-touch meeting rooms.', 'conference-systems.webp', '/services/conference-boardroom-av/' ),
 				array( 'Stage & Architectural Lighting', 'Event and permanent lighting design and control.', 'stage-lighting.webp', '/services/stage-architectural-lighting/' ),
 				array( 'Acoustic Design & Soundproofing', 'Room acoustics and noise control for clean audio.', 'acoustic-solutions.webp', '/services/acoustic-design-soundproofing/' ),
-				array( 'CCTV & Digital Signage', 'Security integration and signage networks.', 'video-systems.webp', '/services/cctv-digital-signage/' ),
+				array( 'Digital Signage & Displays', 'Indoor and outdoor digital signage and professional display networks.', 'video-systems.webp', '/services/digital-signage/' ),
 			);
 			foreach ( $fallback as $f ) : ?>
 				<a class="card card--service" href="<?php echo esc_url( home_url( $f[3] ) ); ?>">

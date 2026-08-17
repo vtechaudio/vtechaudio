@@ -16,12 +16,12 @@ $img = get_template_directory_uri() . '/assets/img/';
 <div class="wp-block-columns card-grid card-grid--3">
 <?php
 $services = array(
-	array( 'Professional Sound Systems', 'Line arrays, mixing and PA tuned for churches, halls and stadiums across Kenya.', '/services/sound-systems/', 'sound-systems.webp' ),
-	array( 'LED Screens & Video Walls', 'Indoor and outdoor LED display supply, installation and content.', '/services/led-screens/', 'led-screens.webp' ),
-	array( 'Conference & Boardroom AV', 'Video conferencing, room automation and one-touch meeting rooms.', '/services/conference-systems/', 'conference-systems.webp' ),
-	array( 'Stage & Architectural Lighting', 'Event and permanent lighting design, rigging and control.', '/services/lighting/', 'stage-lighting.webp' ),
-	array( 'Acoustic Design & Soundproofing', 'Room acoustics, treatment and noise control for clean, clear audio.', '/services/acoustic-solutions/', 'acoustic-solutions.webp' ),
-	array( 'CCTV & Digital Signage', 'Security integration and digital signage networks.', '/services/video-systems/', 'video-systems.webp' ),
+	array( 'Professional Sound Systems', 'Line arrays, mixing and PA tuned for churches, halls and stadiums across Kenya.', '/services/professional-sound-systems/', 'sound-systems.webp' ),
+	array( 'LED Screens & Video Walls', 'Indoor and outdoor LED display supply, installation and content.', '/services/led-screens-video-walls/', 'led-screens.webp' ),
+	array( 'Conference & Boardroom AV', 'Video conferencing, room automation and one-touch meeting rooms.', '/services/conference-boardroom-av/', 'conference-systems.webp' ),
+	array( 'Stage & Architectural Lighting', 'Event and permanent lighting design, rigging and control.', '/services/stage-architectural-lighting/', 'stage-lighting.webp' ),
+	array( 'Acoustic Design & Soundproofing', 'Room acoustics, treatment and noise control for clean, clear audio.', '/services/acoustic-design-soundproofing/', 'acoustic-solutions.webp' ),
+	array( 'Digital Signage & Displays', 'Indoor and outdoor digital signage and professional display networks.', '/services/digital-signage/', 'video-systems.webp' ),
 );
 foreach ( $services as $s ) : ?>
 <!-- wp:column --><div class="wp-block-column">

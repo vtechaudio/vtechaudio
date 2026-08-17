@@ -7,8 +7,8 @@
 
 if ( ! defined( 'ABSPATH' ) ) { exit; }
 
-define( 'VTECH_VERSION', '5.23.0' );
-define( 'VTECH_BUILD', 'v5.23-2026-08-17' );
+define( 'VTECH_VERSION', '5.24.0' );
+define( 'VTECH_BUILD', 'v5.24-2026-08-17' );
 define( 'VTECH_DIR', get_template_directory() );
 define( 'VTECH_URI', get_template_directory_uri() );
 
@@ -199,7 +199,7 @@ add_action( 'after_switch_theme', function () {
  * resolve even when activation-time flushes don't take on a given host — no
  * need to visit Settings > Permalinks. It flushes at most once per version.
  */
-define( 'VTECH_REWRITE_VER', '26' );
+define( 'VTECH_REWRITE_VER', '27' );
 add_action( 'init', 'vtech_versioned_flush', 99999 );
 function vtech_versioned_flush() {
 	if ( get_option( 'vtech_rewrite_ver' ) !== VTECH_REWRITE_VER ) {

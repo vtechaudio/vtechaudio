@@ -53,7 +53,7 @@ $to = vtech_opt( 'vtech_email', 'info@vtechaudio.co.ke' );
 							<option><?php esc_html_e( 'Conference & Boardroom Systems', 'vtech-av' ); ?></option>
 							<option><?php esc_html_e( 'Stage & Architectural Lighting', 'vtech-av' ); ?></option>
 							<option><?php esc_html_e( 'Acoustic Design & Soundproofing', 'vtech-av' ); ?></option>
-							<option><?php esc_html_e( 'CCTV & Digital Signage', 'vtech-av' ); ?></option>
+							<option><?php esc_html_e( 'Digital Signage & Displays', 'vtech-av' ); ?></option>
 							<option><?php esc_html_e( 'Equipment Hire', 'vtech-av' ); ?></option>
 							<option><?php esc_html_e( 'Other / Not sure', 'vtech-av' ); ?></option>
 						</select>

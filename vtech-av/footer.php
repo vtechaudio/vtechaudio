@@ -14,7 +14,7 @@ if ( ! defined( 'ABSPATH' ) ) { exit; }
 		<!-- Col 1: Brand + NAP -->
 		<div class="site-footer__col site-footer__brand">
 			<a class="brand-text brand-text--light" href="<?php echo esc_url( home_url( '/' ) ); ?>">VTECH <span>Audio Visual</span></a>
-			<p><?php echo esc_html( vtech_opt( 'vtech_footer_blurb', "Kenya's premium audio-visual integrator. Sound, LED, lighting, conference & PA systems, acoustics and CCTV designed, installed and supported across Kenya and East Africa." ) ); ?></p>
+			<p><?php echo esc_html( vtech_opt( 'vtech_footer_blurb', "Kenya's premium audio-visual integrator. Sound, LED, lighting, conference & PA systems, acoustics and digital signage designed, installed and supported across Kenya and East Africa." ) ); ?></p>
 			<address>
 				<strong>VTECH Audio Visual Solutions</strong><br>
 				<?php echo esc_html( vtech_opt( 'vtech_address', 'Mpaka Plaza, Mpaka Road, Nairobi' ) ); ?><br>
@@ -61,7 +61,7 @@ if ( ! defined( 'ABSPATH' ) ) { exit; }
 					while ( $svc->have_posts() ) { $svc->the_post(); echo '<li><a href="' . esc_url( get_permalink() ) . '">' . esc_html( get_the_title() ) . '</a></li>'; }
 					wp_reset_postdata();
 				} else {
-					foreach ( array( 'Sound Systems' => '/services/sound-systems/', 'LED Screens' => '/services/led-screens/', 'Conference Systems' => '/services/conference-systems/', 'Stage Lighting' => '/services/lighting/', 'Acoustic Solutions' => '/services/acoustic-solutions/', 'CCTV & Signage' => '/services/video-systems/' ) as $t => $u ) {
+					foreach ( array( 'Sound Systems' => '/services/professional-sound-systems/', 'LED Screens' => '/services/led-screens-video-walls/', 'Conference Systems' => '/services/conference-boardroom-av/', 'Stage Lighting' => '/services/stage-architectural-lighting/', 'Acoustic Solutions' => '/services/acoustic-design-soundproofing/', 'Digital Signage' => '/services/digital-signage/' ) as $t => $u ) {
 						echo '<li><a href="' . esc_url( home_url( $u ) ) . '">' . esc_html( $t ) . '</a></li>';
 					}
 				}
