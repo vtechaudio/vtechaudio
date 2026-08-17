@@ -1,0 +1,27 @@
+# Translation template for VTECH Audio Visual.
+# Copyright (C) 2026 Pimofy Digital
+# This file is distributed under the GNU GPL v2+.
+msgid ""
+msgstr ""
+"Project-Id-Version: VTECH Audio Visual 1.0.0\n"
+"Report-Msgid-Bugs-To: info@vtechaudio.co.ke\n"
+"POT-Creation-Date: 2026-07-03\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language-Team: LANGUAGE\n"
+"X-Domain: vtech-av\n"
+
+# Strings are wrapped with __() / esc_html__() / esc_attr__() throughout the
+# theme. Regenerate with WP-CLI:  wp i18n make-pot . languages/vtech-av.pot
+msgid "Get a Quote"
+msgstr ""
+
+msgid "Get a Quote in 24 Hours"
+msgstr ""
+
+msgid "Request a Site Survey"
+msgstr ""
+
+msgid "Skip to content"
+msgstr ""

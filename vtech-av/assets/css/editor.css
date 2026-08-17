@@ -1,0 +1,13 @@
+/* editor.css — makes the Gutenberg editor visually match the front end.
+   Loaded via add_editor_style(). Mirrors key tokens from theme.json. */
+.editor-styles-wrapper{
+  --c-primary:#81007F;--c-accent:#81007F;--c-secondary:#000;--c-muted:#5B6472;--c-line:#E4E9F0;
+  font-family:'Inter',system-ui,sans-serif;font-size:1.0625rem;line-height:1.65;color:var(--c-secondary);
+}
+.editor-styles-wrapper h1,.editor-styles-wrapper h2,.editor-styles-wrapper h3{
+  font-family:'Manrope',system-ui,sans-serif;font-weight:700;letter-spacing:-.02em;line-height:1.15;
+}
+.editor-styles-wrapper .card{border:1px solid var(--c-line);border-radius:14px;padding:1.5rem}
+.editor-styles-wrapper .cta-band{background:linear-gradient(135deg,#81007F,#5C005A);color:#fff;border-radius:24px;padding:3rem}
+.editor-styles-wrapper .cta-band h2{color:#fff}
+.editor-styles-wrapper .section--surface{background:#F7F9FC}

@@ -1,0 +1,406 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--
+  VTECH Audio Visual — Starter/Demo Content (WordPress WXR 1.2)
+  Import via Tools -> Import -> WordPress, or the one-click importer
+  (inc/demo-import.php points here).
+
+  Notes:
+  - Post type is set per item via <wp:post_type> (service, project, industry,
+    testimonial, faq, page, post).
+  - Taxonomies use <category domain="..."> where domain is the taxonomy slug.
+  - ACF values are included as <wp:postmeta>. If ACF is active the field-group
+    keys (see inc/acf-fields.php) map these automatically; the _fieldname meta
+    stores the ACF field key reference.
+  - Replace image references after import (attachments intentionally omitted to
+    keep the file portable; add featured images in wp-admin).
+-->
+<rss version="2.0"
+	xmlns:excerpt="http://wordpress.org/export/1.2/excerpt/"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:wp="http://wordpress.org/export/1.2/">
+<channel>
+	<title>VTECH Audio Visual Solutions</title>
+	<link>https://vtechaudio.co.ke</link>
+	<description>Kenya's premium audio-visual integrator</description>
+	<pubDate>Fri, 03 Jul 2026 20:00:00 +0000</pubDate>
+	<language>en-KE</language>
+	<wp:wxr_version>1.2</wp:wxr_version>
+	<wp:base_site_url>https://vtechaudio.co.ke</wp:base_site_url>
+	<wp:base_blog_url>https://vtechaudio.co.ke</wp:base_blog_url>
+
+	<wp:author>
+		<wp:author_id>1</wp:author_id>
+		<wp:author_login><![CDATA[vtech]]></wp:author_login>
+		<wp:author_email><![CDATA[info@vtechaudio.co.ke]]></wp:author_email>
+		<wp:author_display_name><![CDATA[VTECH Audio Visual]]></wp:author_display_name>
+		<wp:author_first_name><![CDATA[VTECH]]></wp:author_first_name>
+		<wp:author_last_name><![CDATA[]]></wp:author_last_name>
+	</wp:author>
+
+	<!-- ===== Taxonomy terms ===== -->
+	<wp:term><wp:term_taxonomy>service_category</wp:term_taxonomy><wp:term_slug>audio</wp:term_slug><wp:term_name><![CDATA[Audio]]></wp:term_name></wp:term>
+	<wp:term><wp:term_taxonomy>service_category</wp:term_taxonomy><wp:term_slug>video</wp:term_slug><wp:term_name><![CDATA[Video]]></wp:term_name></wp:term>
+	<wp:term><wp:term_taxonomy>service_category</wp:term_taxonomy><wp:term_slug>lighting</wp:term_slug><wp:term_name><![CDATA[Lighting]]></wp:term_name></wp:term>
+	<wp:term><wp:term_taxonomy>industry</wp:term_taxonomy><wp:term_slug>churches</wp:term_slug><wp:term_name><![CDATA[Churches]]></wp:term_name></wp:term>
+	<wp:term><wp:term_taxonomy>industry</wp:term_taxonomy><wp:term_slug>hotels</wp:term_slug><wp:term_name><![CDATA[Hotels]]></wp:term_name></wp:term>
+	<wp:term><wp:term_taxonomy>industry</wp:term_taxonomy><wp:term_slug>education</wp:term_slug><wp:term_name><![CDATA[Education]]></wp:term_name></wp:term>
+	<wp:term><wp:term_taxonomy>industry</wp:term_taxonomy><wp:term_slug>corporate</wp:term_slug><wp:term_name><![CDATA[Corporate]]></wp:term_name></wp:term>
+	<wp:term><wp:term_taxonomy>technology</wp:term_taxonomy><wp:term_slug>line-array</wp:term_slug><wp:term_name><![CDATA[Line Array]]></wp:term_name></wp:term>
+	<wp:term><wp:term_taxonomy>technology</wp:term_taxonomy><wp:term_slug>led-wall</wp:term_slug><wp:term_name><![CDATA[LED Wall]]></wp:term_name></wp:term>
+	<wp:term><wp:term_taxonomy>project_location</wp:term_taxonomy><wp:term_slug>nairobi</wp:term_slug><wp:term_name><![CDATA[Nairobi]]></wp:term_name></wp:term>
+	<wp:term><wp:term_taxonomy>project_location</wp:term_taxonomy><wp:term_slug>mombasa</wp:term_slug><wp:term_name><![CDATA[Mombasa]]></wp:term_name></wp:term>
+	<wp:term><wp:term_taxonomy>faq_topic</wp:term_taxonomy><wp:term_slug>general</wp:term_slug><wp:term_name><![CDATA[General]]></wp:term_name></wp:term>
+
+	<!-- ===================== SERVICES ===================== -->
+	<item>
+		<title>Professional Sound Systems</title>
+		<link>https://vtechaudio.co.ke/services/sound-systems/</link>
+		<dc:creator><![CDATA[vtech]]></dc:creator>
+		<content:encoded><![CDATA[<!-- wp:paragraph --><p>Professional sound systems in Kenya fail for one reason: they are specified for a spec sheet, not a space. VTECH designs every system around your actual venue &mdash; acoustics, seating and use &mdash; so speech stays intelligible and music stays clean at any volume. From a 100-seat church to a national stadium, we handle design, supply, installation, tuning and support.</p><!-- /wp:paragraph -->]]></content:encoded>
+		<excerpt:encoded><![CDATA[Line arrays, PA systems and mixing tuned for churches, halls, stadiums and events across Kenya.]]></excerpt:encoded>
+		<wp:post_name>sound-systems</wp:post_name>
+		<wp:status>publish</wp:status>
+		<wp:post_type>service</wp:post_type>
+		<wp:menu_order>1</wp:menu_order>
+		<category domain="service_category" nicename="audio"><![CDATA[Audio]]></category>
+		<wp:postmeta><wp:meta_key>tagline</wp:meta_key><wp:meta_value><![CDATA[Clear, powerful, intelligible sound — engineered for your room.]]></wp:meta_value></wp:postmeta>
+		<wp:postmeta><wp:meta_key>_tagline</wp:meta_key><wp:meta_value><![CDATA[svc_tagline]]></wp:meta_value></wp:postmeta>
+		<wp:postmeta><wp:meta_key>price_from</wp:meta_key><wp:meta_value><![CDATA[120000]]></wp:meta_value></wp:postmeta>
+		<wp:postmeta><wp:meta_key>_price_from</wp:meta_key><wp:meta_value><![CDATA[svc_price_from]]></wp:meta_value></wp:postmeta>
+		<wp:postmeta><wp:meta_key>icon</wp:meta_key><wp:meta_value><![CDATA[sound]]></wp:meta_value></wp:postmeta>
+		<wp:postmeta><wp:meta_key>_icon</wp:meta_key><wp:meta_value><![CDATA[svc_icon]]></wp:meta_value></wp:postmeta>
+	</item>
+
+	<item>
+		<title>LED Screens &amp; Video Walls</title>
+		<link>https://vtechaudio.co.ke/services/led-screens/</link>
+		<dc:creator><![CDATA[vtech]]></dc:creator>
+		<content:encoded><![CDATA[<!-- wp:paragraph --><p>Whether it is an outdoor advertising wall in Nairobi or a stage backdrop for worship, VTECH supplies and installs LED screens matched to your pixel-pitch, brightness and viewing-distance needs &mdash; with content and control handled end to end.</p><!-- /wp:paragraph -->]]></content:encoded>
+		<excerpt:encoded><![CDATA[Indoor and outdoor LED display supply, installation and content for events, retail and corporate.]]></excerpt:encoded>
+		<wp:post_name>led-screens</wp:post_name>
+		<wp:status>publish</wp:status>
+		<wp:post_type>service</wp:post_type>
+		<wp:menu_order>2</wp:menu_order>
+		<category domain="service_category" nicename="video"><![CDATA[Video]]></category>
+		<wp:postmeta><wp:meta_key>tagline</wp:meta_key><wp:meta_value><![CDATA[Bright, seamless LED that performs in Kenyan daylight.]]></wp:meta_value></wp:postmeta>
+		<wp:postmeta><wp:meta_key>_tagline</wp:meta_key><wp:meta_value><![CDATA[svc_tagline]]></wp:meta_value></wp:postmeta>
+		<wp:postmeta><wp:meta_key>price_from</wp:meta_key><wp:meta_value><![CDATA[350000]]></wp:meta_value></wp:postmeta>
+		<wp:postmeta><wp:meta_key>_price_from</wp:meta_key><wp:meta_value><![CDATA[svc_price_from]]></wp:meta_value></wp:postmeta>
+		<wp:postmeta><wp:meta_key>icon</wp:meta_key><wp:meta_value><![CDATA[led]]></wp:meta_value></wp:postmeta>
+		<wp:postmeta><wp:meta_key>_icon</wp:meta_key><wp:meta_value><![CDATA[svc_icon]]></wp:meta_value></wp:postmeta>
+	</item>
+
+	<item>
+		<title>Conference &amp; Boardroom Systems</title>
+		<link>https://vtechaudio.co.ke/services/conference-systems/</link>
+		<dc:creator><![CDATA[vtech]]></dc:creator>
+		<content:encoded><![CDATA[<!-- wp:paragraph --><p>Boardroom AV solutions in Nairobi should not need an IT technician to start a call. VTECH builds conference rooms where one button connects the display, camera, microphones and video-conferencing platform &mdash; reliable every time, for every user.</p><!-- /wp:paragraph -->]]></content:encoded>
+		<excerpt:encoded><![CDATA[Video conferencing, room automation and one-touch meeting rooms for corporates and government.]]></excerpt:encoded>
+		<wp:post_name>conference-systems</wp:post_name>
+		<wp:status>publish</wp:status>
+		<wp:post_type>service</wp:post_type>
+		<wp:menu_order>3</wp:menu_order>
+		<category domain="service_category" nicename="video"><![CDATA[Video]]></category>
+		<wp:postmeta><wp:meta_key>tagline</wp:meta_key><wp:meta_value><![CDATA[One-touch meeting rooms that just work.]]></wp:meta_value></wp:postmeta>
+		<wp:postmeta><wp:meta_key>_tagline</wp:meta_key><wp:meta_value><![CDATA[svc_tagline]]></wp:meta_value></wp:postmeta>
+		<wp:postmeta><wp:meta_key>price_from</wp:meta_key><wp:meta_value><![CDATA[180000]]></wp:meta_value></wp:postmeta>
+		<wp:postmeta><wp:meta_key>_price_from</wp:meta_key><wp:meta_value><![CDATA[svc_price_from]]></wp:meta_value></wp:postmeta>
+		<wp:postmeta><wp:meta_key>icon</wp:meta_key><wp:meta_value><![CDATA[conference]]></wp:meta_value></wp:postmeta>
+		<wp:postmeta><wp:meta_key>_icon</wp:meta_key><wp:meta_value><![CDATA[svc_icon]]></wp:meta_value></wp:postmeta>
+	</item>
+
+	<item>
+		<title>Stage &amp; Architectural Lighting</title>
+		<link>https://vtechaudio.co.ke/services/lighting/</link>
+		<dc:creator><![CDATA[vtech]]></dc:creator>
+		<content:encoded><![CDATA[<!-- wp:paragraph --><p>Event and permanent lighting design, rigging and control for churches, venues and corporate spaces across Kenya.</p><!-- /wp:paragraph -->]]></content:encoded>
+		<excerpt:encoded><![CDATA[Event and permanent lighting design, rigging and control.]]></excerpt:encoded>
+		<wp:post_name>lighting</wp:post_name>
+		<wp:status>publish</wp:status>
+		<wp:post_type>service</wp:post_type>
+		<wp:menu_order>4</wp:menu_order>
+		<category domain="service_category" nicename="lighting"><![CDATA[Lighting]]></category>
+		<wp:postmeta><wp:meta_key>tagline</wp:meta_key><wp:meta_value><![CDATA[Lighting that shapes the moment.]]></wp:meta_value></wp:postmeta>
+		<wp:postmeta><wp:meta_key>_tagline</wp:meta_key><wp:meta_value><![CDATA[svc_tagline]]></wp:meta_value></wp:postmeta>
+		<wp:postmeta><wp:meta_key>price_from</wp:meta_key><wp:meta_value><![CDATA[220000]]></wp:meta_value></wp:postmeta>
+		<wp:postmeta><wp:meta_key>_price_from</wp:meta_key><wp:meta_value><![CDATA[svc_price_from]]></wp:meta_value></wp:postmeta>
+		<wp:postmeta><wp:meta_key>icon</wp:meta_key><wp:meta_value><![CDATA[lighting]]></wp:meta_value></wp:postmeta>
+		<wp:postmeta><wp:meta_key>_icon</wp:meta_key><wp:meta_value><![CDATA[svc_icon]]></wp:meta_value></wp:postmeta>
+	</item>
+
+	<item>
+		<title>Acoustic Design &amp; Soundproofing</title>
+		<link>https://vtechaudio.co.ke/services/acoustic-solutions/</link>
+		<dc:creator><![CDATA[vtech]]></dc:creator>
+		<content:encoded><![CDATA[<!-- wp:paragraph --><p>Room acoustics, treatment and noise control for clean, clear audio &mdash; often the most overlooked and most impactful part of any AV project.</p><!-- /wp:paragraph -->]]></content:encoded>
+		<excerpt:encoded><![CDATA[Room acoustics, treatment and soundproofing for clean, clear audio.]]></excerpt:encoded>
+		<wp:post_name>acoustic-solutions</wp:post_name>
+		<wp:status>publish</wp:status>
+		<wp:post_type>service</wp:post_type>
+		<wp:menu_order>5</wp:menu_order>
+		<category domain="service_category" nicename="audio"><![CDATA[Audio]]></category>
+		<wp:postmeta><wp:meta_key>tagline</wp:meta_key><wp:meta_value><![CDATA[Fix the room, and everything sounds better.]]></wp:meta_value></wp:postmeta>
+		<wp:postmeta><wp:meta_key>_tagline</wp:meta_key><wp:meta_value><![CDATA[svc_tagline]]></wp:meta_value></wp:postmeta>
+		<wp:postmeta><wp:meta_key>price_from</wp:meta_key><wp:meta_value><![CDATA[90000]]></wp:meta_value></wp:postmeta>
+		<wp:postmeta><wp:meta_key>_price_from</wp:meta_key><wp:meta_value><![CDATA[svc_price_from]]></wp:meta_value></wp:postmeta>
+		<wp:postmeta><wp:meta_key>icon</wp:meta_key><wp:meta_value><![CDATA[acoustic]]></wp:meta_value></wp:postmeta>
+		<wp:postmeta><wp:meta_key>_icon</wp:meta_key><wp:meta_value><![CDATA[svc_icon]]></wp:meta_value></wp:postmeta>
+	</item>
+
+	<item>
+		<title>CCTV &amp; Digital Signage</title>
+		<link>https://vtechaudio.co.ke/services/video-systems/</link>
+		<dc:creator><![CDATA[vtech]]></dc:creator>
+		<content:encoded><![CDATA[<!-- wp:paragraph --><p>Security integration and digital signage networks &mdash; designed to work alongside your audio-visual systems, not fight them.</p><!-- /wp:paragraph -->]]></content:encoded>
+		<excerpt:encoded><![CDATA[Security integration and digital signage networks.]]></excerpt:encoded>
+		<wp:post_name>video-systems</wp:post_name>
+		<wp:status>publish</wp:status>
+		<wp:post_type>service</wp:post_type>
+		<wp:menu_order>6</wp:menu_order>
+		<category domain="service_category" nicename="video"><![CDATA[Video]]></category>
+		<wp:postmeta><wp:meta_key>tagline</wp:meta_key><wp:meta_value><![CDATA[See more. Say more. Secure more.]]></wp:meta_value></wp:postmeta>
+		<wp:postmeta><wp:meta_key>_tagline</wp:meta_key><wp:meta_value><![CDATA[svc_tagline]]></wp:meta_value></wp:postmeta>
+		<wp:postmeta><wp:meta_key>icon</wp:meta_key><wp:meta_value><![CDATA[cctv]]></wp:meta_value></wp:postmeta>
+		<wp:postmeta><wp:meta_key>_icon</wp:meta_key><wp:meta_value><![CDATA[svc_icon]]></wp:meta_value></wp:postmeta>
+	</item>
+
+	<!-- ===================== PROJECTS ===================== -->
+	<item>
+		<title>Auditorium Sound &amp; LED Upgrade — Nairobi Church</title>
+		<link>https://vtechaudio.co.ke/projects/nairobi-church-auditorium/</link>
+		<dc:creator><![CDATA[vtech]]></dc:creator>
+		<content:encoded><![CDATA[<!-- wp:paragraph --><p>A 1,200-seat Nairobi congregation needed speech-first sound and a stage LED wall. VTECH delivered a room-tuned line array and a seamless indoor LED backdrop, with volunteer-friendly control.</p><!-- /wp:paragraph -->]]></content:encoded>
+		<excerpt:encoded><![CDATA[Line array + indoor LED wall for a 1,200-seat congregation.]]></excerpt:encoded>
+		<wp:post_name>nairobi-church-auditorium</wp:post_name>
+		<wp:status>publish</wp:status>
+		<wp:post_type>project</wp:post_type>
+		<category domain="industry" nicename="churches"><![CDATA[Churches]]></category>
+		<category domain="technology" nicename="line-array"><![CDATA[Line Array]]></category>
+		<category domain="technology" nicename="led-wall"><![CDATA[LED Wall]]></category>
+		<category domain="project_location" nicename="nairobi"><![CDATA[Nairobi]]></category>
+		<wp:postmeta><wp:meta_key>client</wp:meta_key><wp:meta_value><![CDATA[Confidential — Nairobi]]></wp:meta_value></wp:postmeta>
+		<wp:postmeta><wp:meta_key>_client</wp:meta_key><wp:meta_value><![CDATA[prj_client]]></wp:meta_value></wp:postmeta>
+		<wp:postmeta><wp:meta_key>outcome</wp:meta_key><wp:meta_value><![CDATA[Even coverage to every seat and a dramatic stage backdrop, operated by volunteers.]]></wp:meta_value></wp:postmeta>
+		<wp:postmeta><wp:meta_key>_outcome</wp:meta_key><wp:meta_value><![CDATA[prj_outcome]]></wp:meta_value></wp:postmeta>
+	</item>
+
+	<item>
+		<title>Boardroom AV Rollout — Corporate HQ</title>
+		<link>https://vtechaudio.co.ke/projects/corporate-boardroom-rollout/</link>
+		<dc:creator><![CDATA[vtech]]></dc:creator>
+		<content:encoded><![CDATA[<!-- wp:paragraph --><p>Eight one-touch meeting rooms rolled out across a corporate headquarters, standardised on a single control platform for predictable support.</p><!-- /wp:paragraph -->]]></content:encoded>
+		<excerpt:encoded><![CDATA[Eight standardised one-touch conference rooms for a Nairobi HQ.]]></excerpt:encoded>
+		<wp:post_name>corporate-boardroom-rollout</wp:post_name>
+		<wp:status>publish</wp:status>
+		<wp:post_type>project</wp:post_type>
+		<category domain="industry" nicename="corporate"><![CDATA[Corporate]]></category>
+		<category domain="project_location" nicename="nairobi"><![CDATA[Nairobi]]></category>
+		<wp:postmeta><wp:meta_key>client</wp:meta_key><wp:meta_value><![CDATA[Confidential — Corporate]]></wp:meta_value></wp:postmeta>
+		<wp:postmeta><wp:meta_key>_client</wp:meta_key><wp:meta_value><![CDATA[prj_client]]></wp:meta_value></wp:postmeta>
+		<wp:postmeta><wp:meta_key>outcome</wp:meta_key><wp:meta_value><![CDATA[Meetings start on time, every time, with no IT call-outs.]]></wp:meta_value></wp:postmeta>
+		<wp:postmeta><wp:meta_key>_outcome</wp:meta_key><wp:meta_value><![CDATA[prj_outcome]]></wp:meta_value></wp:postmeta>
+	</item>
+
+	<item>
+		<title>Conference Hall Sound — Coastal Hotel</title>
+		<link>https://vtechaudio.co.ke/projects/mombasa-hotel-conference/</link>
+		<dc:creator><![CDATA[vtech]]></dc:creator>
+		<content:encoded><![CDATA[<!-- wp:paragraph --><p>A Mombasa hotel needed flexible sound and AV for banqueting and conferences. VTECH delivered a zoned system with simple presets for events staff.</p><!-- /wp:paragraph -->]]></content:encoded>
+		<excerpt:encoded><![CDATA[Zoned conference and banqueting AV for a coastal hotel.]]></excerpt:encoded>
+		<wp:post_name>mombasa-hotel-conference</wp:post_name>
+		<wp:status>publish</wp:status>
+		<wp:post_type>project</wp:post_type>
+		<category domain="industry" nicename="hotels"><![CDATA[Hotels]]></category>
+		<category domain="project_location" nicename="mombasa"><![CDATA[Mombasa]]></category>
+		<wp:postmeta><wp:meta_key>client</wp:meta_key><wp:meta_value><![CDATA[Confidential — Mombasa]]></wp:meta_value></wp:postmeta>
+		<wp:postmeta><wp:meta_key>_client</wp:meta_key><wp:meta_value><![CDATA[prj_client]]></wp:meta_value></wp:postmeta>
+		<wp:postmeta><wp:meta_key>outcome</wp:meta_key><wp:meta_value><![CDATA[One flexible system serving weddings, AGMs and conferences.]]></wp:meta_value></wp:postmeta>
+		<wp:postmeta><wp:meta_key>_outcome</wp:meta_key><wp:meta_value><![CDATA[prj_outcome]]></wp:meta_value></wp:postmeta>
+	</item>
+
+	<!-- ===================== INDUSTRIES (landing) ===================== -->
+	<item>
+		<title>AV Solutions for Churches in Kenya</title>
+		<link>https://vtechaudio.co.ke/industries/churches/</link>
+		<dc:creator><![CDATA[vtech]]></dc:creator>
+		<content:encoded><![CDATA[<!-- wp:paragraph --><p>Church sound systems in Kenya must put intelligible speech first, then powerful worship &mdash; all operated by volunteers. VTECH designs, installs and supports houses-of-worship AV nationwide, from single halls to multi-site campuses.</p><!-- /wp:paragraph -->]]></content:encoded>
+		<excerpt:encoded><![CDATA[Church sound systems, LED and streaming across Kenya — speech-first, volunteer-friendly.]]></excerpt:encoded>
+		<wp:post_name>churches</wp:post_name>
+		<wp:status>publish</wp:status>
+		<wp:post_type>industry</wp:post_type>
+	</item>
+
+	<item>
+		<title>Hotel Audio Visual Solutions in Kenya</title>
+		<link>https://vtechaudio.co.ke/industries/hotels/</link>
+		<dc:creator><![CDATA[vtech]]></dc:creator>
+		<content:encoded><![CDATA[<!-- wp:paragraph --><p>From banqueting halls to boardrooms, VTECH delivers flexible, staff-friendly AV for Kenyan hotels and conference venues &mdash; one system for weddings, AGMs and corporate events.</p><!-- /wp:paragraph -->]]></content:encoded>
+		<excerpt:encoded><![CDATA[Flexible conference and banqueting AV for hotels across Kenya.]]></excerpt:encoded>
+		<wp:post_name>hotels</wp:post_name>
+		<wp:status>publish</wp:status>
+		<wp:post_type>industry</wp:post_type>
+	</item>
+
+	<item>
+		<title>School PA Systems in Kenya</title>
+		<link>https://vtechaudio.co.ke/industries/education/</link>
+		<dc:creator><![CDATA[vtech]]></dc:creator>
+		<content:encoded><![CDATA[<!-- wp:paragraph --><p>Clear announcements, assembly sound and lecture-hall AV for Kenyan schools and universities &mdash; reliable, safe and easy to run.</p><!-- /wp:paragraph -->]]></content:encoded>
+		<excerpt:encoded><![CDATA[PA, assembly and lecture-hall AV for schools and universities in Kenya.]]></excerpt:encoded>
+		<wp:post_name>education</wp:post_name>
+		<wp:status>publish</wp:status>
+		<wp:post_type>industry</wp:post_type>
+	</item>
+
+	<!-- ===================== TESTIMONIALS ===================== -->
+	<item>
+		<title>Testimonial — Church Media Lead</title>
+		<link>https://vtechaudio.co.ke/?post_type=testimonial&#038;p=901</link>
+		<dc:creator><![CDATA[vtech]]></dc:creator>
+		<content:encoded><![CDATA[VTECH surveyed our sanctuary before quoting, and it showed. Every seat hears clearly now, and our volunteers find the system easy to run.]]></content:encoded>
+		<wp:post_name>testimonial-church-media-lead</wp:post_name>
+		<wp:status>publish</wp:status>
+		<wp:post_type>testimonial</wp:post_type>
+		<wp:postmeta><wp:meta_key>author</wp:meta_key><wp:meta_value><![CDATA[Media Lead]]></wp:meta_value></wp:postmeta>
+		<wp:postmeta><wp:meta_key>_author</wp:meta_key><wp:meta_value><![CDATA[tst_author]]></wp:meta_value></wp:postmeta>
+		<wp:postmeta><wp:meta_key>role</wp:meta_key><wp:meta_value><![CDATA[Church, Nairobi]]></wp:meta_value></wp:postmeta>
+		<wp:postmeta><wp:meta_key>_role</wp:meta_key><wp:meta_value><![CDATA[tst_role]]></wp:meta_value></wp:postmeta>
+		<wp:postmeta><wp:meta_key>rating</wp:meta_key><wp:meta_value><![CDATA[5]]></wp:meta_value></wp:postmeta>
+		<wp:postmeta><wp:meta_key>_rating</wp:meta_key><wp:meta_value><![CDATA[tst_rating]]></wp:meta_value></wp:postmeta>
+	</item>
+
+	<item>
+		<title>Testimonial — Facilities Manager</title>
+		<link>https://vtechaudio.co.ke/?post_type=testimonial&#038;p=902</link>
+		<dc:creator><![CDATA[vtech]]></dc:creator>
+		<content:encoded><![CDATA[We got a fixed quote in a day and a clean install with zero surprises. Our boardrooms finally just work.]]></content:encoded>
+		<wp:post_name>testimonial-facilities-manager</wp:post_name>
+		<wp:status>publish</wp:status>
+		<wp:post_type>testimonial</wp:post_type>
+		<wp:postmeta><wp:meta_key>author</wp:meta_key><wp:meta_value><![CDATA[Facilities Manager]]></wp:meta_value></wp:postmeta>
+		<wp:postmeta><wp:meta_key>_author</wp:meta_key><wp:meta_value><![CDATA[tst_author]]></wp:meta_value></wp:postmeta>
+		<wp:postmeta><wp:meta_key>role</wp:meta_key><wp:meta_value><![CDATA[Corporate HQ, Nairobi]]></wp:meta_value></wp:postmeta>
+		<wp:postmeta><wp:meta_key>_role</wp:meta_key><wp:meta_value><![CDATA[tst_role]]></wp:meta_value></wp:postmeta>
+		<wp:postmeta><wp:meta_key>rating</wp:meta_key><wp:meta_value><![CDATA[5]]></wp:meta_value></wp:postmeta>
+		<wp:postmeta><wp:meta_key>_rating</wp:meta_key><wp:meta_value><![CDATA[tst_rating]]></wp:meta_value></wp:postmeta>
+	</item>
+
+	<!-- ===================== FAQs ===================== -->
+	<item>
+		<title>How fast can you quote my AV project?</title>
+		<link>https://vtechaudio.co.ke/?post_type=faq&#038;p=910</link>
+		<dc:creator><![CDATA[vtech]]></dc:creator>
+		<content:encoded><![CDATA[A fixed written quote within 24 hours of a free site survey in Nairobi, and within 48 hours upcountry.]]></content:encoded>
+		<wp:post_name>faq-quote-turnaround</wp:post_name>
+		<wp:status>publish</wp:status>
+		<wp:post_type>faq</wp:post_type>
+		<category domain="faq_topic" nicename="general"><![CDATA[General]]></category>
+	</item>
+
+	<item>
+		<title>Do you cover the whole of Kenya?</title>
+		<link>https://vtechaudio.co.ke/?post_type=faq&#038;p=911</link>
+		<dc:creator><![CDATA[vtech]]></dc:creator>
+		<content:encoded><![CDATA[Yes — we install and support AV systems across all 47 counties, plus select projects across East Africa.]]></content:encoded>
+		<wp:post_name>faq-coverage</wp:post_name>
+		<wp:status>publish</wp:status>
+		<wp:post_type>faq</wp:post_type>
+		<category domain="faq_topic" nicename="general"><![CDATA[General]]></category>
+	</item>
+
+	<item>
+		<title>Do you hire out equipment as well as install?</title>
+		<link>https://vtechaudio.co.ke/?post_type=faq&#038;p=912</link>
+		<dc:creator><![CDATA[vtech]]></dc:creator>
+		<content:encoded><![CDATA[Yes — sound, lighting, LED and conferencing equipment is available for event hire with delivery, setup and an on-site technician.]]></content:encoded>
+		<wp:post_name>faq-equipment-hire</wp:post_name>
+		<wp:status>publish</wp:status>
+		<wp:post_type>faq</wp:post_type>
+		<category domain="faq_topic" nicename="general"><![CDATA[General]]></category>
+	</item>
+
+	<!-- ===================== PAGES ===================== -->
+	<item>
+		<title>Home</title>
+		<link>https://vtechaudio.co.ke/home/</link>
+		<dc:creator><![CDATA[vtech]]></dc:creator>
+		<content:encoded><![CDATA[<!-- wp:pattern {"slug":"vtech-av/home-hero"} /-->
+<!-- wp:pattern {"slug":"vtech-av/home-services"} /-->
+<!-- wp:pattern {"slug":"vtech-av/home-industries"} /-->
+<!-- wp:pattern {"slug":"vtech-av/home-stats"} /-->
+<!-- wp:pattern {"slug":"vtech-av/home-cta-faq"} /-->]]></content:encoded>
+		<wp:post_name>home</wp:post_name>
+		<wp:status>publish</wp:status>
+		<wp:post_type>page</wp:post_type>
+		<wp:postmeta><wp:meta_key>_wp_page_template</wp:meta_key><wp:meta_value><![CDATA[page-full-width.php]]></wp:meta_value></wp:postmeta>
+	</item>
+
+	<item>
+		<title>About</title>
+		<link>https://vtechaudio.co.ke/about/</link>
+		<dc:creator><![CDATA[vtech]]></dc:creator>
+		<content:encoded><![CDATA[<!-- wp:heading --><h2>We make professional audio-visual simple in Kenya</h2><!-- /wp:heading --><!-- wp:paragraph --><p>VTECH Audio Visual Solutions is a Nairobi-based audio-visual integrator. We design, supply, install and support professional sound, LED, lighting, conferencing, acoustic and CCTV systems for organisations across Kenya and East Africa.</p><!-- /wp:paragraph -->]]></content:encoded>
+		<wp:post_name>about</wp:post_name>
+		<wp:status>publish</wp:status>
+		<wp:post_type>page</wp:post_type>
+	</item>
+
+	<item>
+		<title>Contact</title>
+		<link>https://vtechaudio.co.ke/contact/</link>
+		<dc:creator><![CDATA[vtech]]></dc:creator>
+		<content:encoded><![CDATA[<!-- wp:heading --><h2>Get a quote in 24 hours</h2><!-- /wp:heading --><!-- wp:paragraph --><p>Tell us about your venue and project. We will arrange a free site survey and send a fixed written quote within 24 hours (Nairobi) or 48 hours (upcountry).</p><!-- /wp:paragraph --><!-- wp:paragraph --><p><strong>VTECH Audio Visual Solutions</strong><br>Mpaka Plaza, Mpaka Road, Nairobi<br>Phone: +254 28 135246<br>Email: info@vtechaudio.co.ke<br>Hours: Monday&ndash;Friday, 9:00 AM &ndash; 6:00 PM</p><!-- /wp:paragraph -->]]></content:encoded>
+		<wp:post_name>contact</wp:post_name>
+		<wp:status>publish</wp:status>
+		<wp:post_type>page</wp:post_type>
+	</item>
+
+	<item>
+		<title>Blog</title>
+		<link>https://vtechaudio.co.ke/blog/</link>
+		<dc:creator><![CDATA[vtech]]></dc:creator>
+		<content:encoded><![CDATA[]]></content:encoded>
+		<wp:post_name>blog</wp:post_name>
+		<wp:status>publish</wp:status>
+		<wp:post_type>page</wp:post_type>
+	</item>
+
+	<item>
+		<title>FAQ</title>
+		<link>https://vtechaudio.co.ke/faq/</link>
+		<dc:creator><![CDATA[vtech]]></dc:creator>
+		<content:encoded><![CDATA[<!-- wp:heading --><h2>Frequently Asked Questions</h2><!-- /wp:heading --><!-- wp:paragraph --><p>See our answers to common questions about pricing, coverage, equipment hire, brands and maintenance.</p><!-- /wp:paragraph -->]]></content:encoded>
+		<wp:post_name>faq</wp:post_name>
+		<wp:status>publish</wp:status>
+		<wp:post_type>page</wp:post_type>
+	</item>
+
+	<!-- ===================== BLOG POSTS ===================== -->
+	<item>
+		<title>How Much Does a Sound System Cost in Kenya? (2026 Price Guide)</title>
+		<link>https://vtechaudio.co.ke/blog/sound-system-cost-kenya/</link>
+		<dc:creator><![CDATA[vtech]]></dc:creator>
+		<content:encoded><![CDATA[<!-- wp:paragraph --><p>If you have asked three companies "how much for a sound system in Kenya?" and received three wildly different numbers, you are not alone. Price follows the room, not a catalogue. This guide explains what actually drives the cost of a professional sound system in Kenya in 2026.</p><!-- /wp:paragraph --><!-- wp:heading --><h2>What drives the cost</h2><!-- /wp:heading --><!-- wp:list --><ul><li>Venue size and shape</li><li>Coverage requirements</li><li>Speech vs. music</li><li>Room acoustics</li><li>Control and operation</li></ul><!-- /wp:list --><!-- wp:heading --><h2>Indicative ranges (2026, KES)</h2><!-- /wp:heading --><!-- wp:list --><ul><li>Small hall / meeting room PA: KES 120,000 &ndash; 350,000</li><li>Mid-size church or conference room: KES 350,000 &ndash; 1,200,000</li><li>Large auditorium / stadium: KES 1,500,000+</li></ul><!-- /wp:list --><!-- wp:paragraph --><p><a href="/contact/">Book a free site survey</a> and get a fixed quote in 24 hours.</p><!-- /wp:paragraph -->]]></content:encoded>
+		<excerpt:encoded><![CDATA[A clear, honest breakdown of professional sound system costs in Kenya in 2026.]]></excerpt:encoded>
+		<wp:post_name>sound-system-cost-kenya</wp:post_name>
+		<wp:status>publish</wp:status>
+		<wp:post_type>post</wp:post_type>
+		<category domain="category" nicename="buying-guides"><![CDATA[Buying Guides]]></category>
+	</item>
+
+	<item>
+		<title>Best Church Sound Systems for Kenyan Congregations</title>
+		<link>https://vtechaudio.co.ke/blog/church-sound-systems-kenya/</link>
+		<dc:creator><![CDATA[vtech]]></dc:creator>
+		<content:encoded><![CDATA[<!-- wp:paragraph --><p>A church sound system has one job most vendors forget: intelligible speech for every seat. Here is how to choose well.</p><!-- /wp:paragraph --><!-- wp:heading --><h2>What matters most</h2><!-- /wp:heading --><!-- wp:list --><ul><li>Speech intelligibility first</li><li>Even coverage</li><li>Feedback resistance</li><li>Volunteer-friendly control</li><li>Room acoustics</li></ul><!-- /wp:list --><!-- wp:paragraph --><p>VTECH specialises in church sound across Kenya. <a href="/contact/">Request a free survey</a>.</p><!-- /wp:paragraph -->]]></content:encoded>
+		<excerpt:encoded><![CDATA[How to choose a church sound system in Kenya that keeps speech clear and operation simple.]]></excerpt:encoded>
+		<wp:post_name>church-sound-systems-kenya</wp:post_name>
+		<wp:status>publish</wp:status>
+		<wp:post_type>post</wp:post_type>
+		<category domain="category" nicename="sector-guides"><![CDATA[Sector Guides]]></category>
+	</item>
+
+</channel>
+</rss>

@@ -1,0 +1,5 @@
+Bundled fonts — SIL Open Font License 1.1
+- Manrope (manrope-var.woff2) (c) The Manrope Project Authors. OFL-1.1.
+- Inter (inter-var.woff2) (c) The Inter Project Authors. OFL-1.1.
+Full license: https://scripts.sil.org/OFL
+These variable woff2 files are Latin-subset builds from Fontsource (fontsource.org).
