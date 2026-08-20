@@ -19,7 +19,7 @@ function vtech_handle_quote() {
 	}
 
 	// Spam honeypot: the hidden "website" field must stay empty for humans.
-	if ( \! empty( $_POST['website'] ) ) {
+	if ( ! empty( $_POST['website'] ) ) {
 		wp_send_json_success( array( 'message' => 'Thank you — your request has been received.' ) );
 	}
 
