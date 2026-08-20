@@ -320,3 +320,16 @@ body.nav-open{overflow:hidden}
 
 /* Anti-spam honeypot (visually hidden, off-screen). */
 .vtech-hp{position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden}
+
+/* ---------- Sticky CTA + floating buttons: visibility fixes ---------- */
+/* Respect [hidden] so the bar stays hidden until the JS reveals it after the
+   hero scrolls away. The base .sticky-cta{display:flex} rule used to override
+   [hidden], leaving the bar stuck over the hero on page load. */
+.sticky-cta[hidden]{display:none}
+/* When the bar is visible, reserve space so it cannot cover footer content and
+   raise the floating buttons so they do not overlap it. Uses :has() on modern
+   browsers; older browsers simply keep the previous layout. */
+body:has(.sticky-cta:not([hidden])){padding-bottom:5rem}
+body:has(.sticky-cta:not([hidden])) .float-btn--call{bottom:6.25rem}
+body:has(.sticky-cta:not([hidden])) .float-btn--wa{bottom:10.5rem}
+
