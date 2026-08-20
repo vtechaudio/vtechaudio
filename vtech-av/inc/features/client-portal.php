@@ -33,5 +33,7 @@ add_action( 'template_redirect', function () {
 	// Load a dedicated template if present.
 	$tpl = locate_template( 'templates/client-portal.php' );
 	if ( $tpl ) { include $tpl; exit; }
-	wp_die( 'Client Portal template not found. See inc/features/client-portal.php TODOs.' );
+	// No portal template yet — send the visitor somewhere useful, never a raw error.
+	wp_safe_redirect( home_url( '/consultation/' ) );
+	exit;
 } );

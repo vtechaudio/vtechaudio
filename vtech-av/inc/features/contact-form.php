@@ -18,6 +18,11 @@ function vtech_handle_quote() {
 		wp_send_json_error( array( 'message' => 'Security check failed. Please refresh and try again.' ), 400 );
 	}
 
+	// Spam honeypot: the hidden "website" field must stay empty for humans.
+	if ( \! empty( $_POST['website'] ) ) {
+		wp_send_json_success( array( 'message' => 'Thank you — your request has been received.' ) );
+	}
+
 	$name    = sanitize_text_field( wp_unslash( $_POST['name'] ?? '' ) );
 	$email   = sanitize_email( wp_unslash( $_POST['email'] ?? '' ) );
 	$phone   = sanitize_text_field( wp_unslash( $_POST['phone'] ?? '' ) );

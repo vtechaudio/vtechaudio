@@ -17,43 +17,20 @@
  */
 if ( ! defined( 'ABSPATH' ) ) { exit; }
 
-/** Indicative rate card (KES). REPLACE with real figures. */
+/** Rate card intentionally empty — VTECH never publishes fabricated prices. */
 function vtech_estimator_rate_card() {
-	return array(
-		// service_slug => array( base, per_seat )
-		'conference-systems' => array( 'base' => 180000, 'per_seat' => 9500 ),
-		'pa-systems'         => array( 'base' => 120000, 'per_seat' => 3200 ),
-		'led-screens'        => array( 'base' => 350000, 'per_sqm' => 42000 ),
-		'stage-lighting'     => array( 'base' => 220000, 'per_fixture' => 18000 ),
-		'acoustic-treatment' => array( 'base' => 90000,  'per_sqm' => 6500 ),
-	);
+	// No fabricated pricing. Empty until a real rate card is provided; the
+	// endpoint returns a "book a survey" message instead of invented numbers.
+	return array();
 }
 
 add_action( 'wp_ajax_vtech_estimate', 'vtech_handle_estimate' );
 add_action( 'wp_ajax_nopriv_vtech_estimate', 'vtech_handle_estimate' );
 function vtech_handle_estimate() {
 	check_ajax_referer( 'vtech_nonce', 'nonce' );
-
-	$service = sanitize_key( $_POST['service'] ?? '' );
-	$qty     = max( 1, absint( $_POST['qty'] ?? 1 ) );
-	$card    = vtech_estimator_rate_card();
-
-	if ( ! isset( $card[ $service ] ) ) {
-		wp_send_json_error( array( 'message' => 'Unknown service.' ) );
-	}
-
-	$c   = $card[ $service ];
-	$var = 0;
-	foreach ( array( 'per_seat', 'per_sqm', 'per_fixture' ) as $k ) {
-		if ( isset( $c[ $k ] ) ) { $var = $c[ $k ] * $qty; break; }
-	}
-	$low  = ( $c['base'] + $var );
-	$high = round( $low * 1.35 );
-
+	// No fabricated pricing is ever returned — always route to a real quote.
 	wp_send_json_success( array(
 		'currency' => 'KES',
-		'low'      => $low,
-		'high'     => $high,
-		'note'     => 'Indicative range only. Book a free site survey for an exact quote in 24 hours.',
+		'note'     => 'For accurate pricing, book a free site survey — we quote within 24 hours.',
 	) );
 }

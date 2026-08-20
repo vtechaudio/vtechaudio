@@ -1,6 +1,6 @@
 # VTECH Audio Visual — Premium WordPress Theme
 
-Version 2.0.0 · A complete, install-and-go custom WordPress theme for VTECH
+Version 5.32.0 · A complete, install-and-go custom WordPress theme for VTECH
 Audio Visual Solutions (Kenya). Native Gutenberg, block-based, SEO-first,
 Core Web Vitals optimised. No page builders.
 
@@ -13,7 +13,7 @@ WP Admin → **Appearance → Themes → Add New → Upload Theme** → select
 `vtech-av.zip` → **Install Now** → **Activate**.
 
 > If you are updating from an earlier build, DELETE the old "VTECH Audio Visual"
-> theme first, then upload. This version is 2.0.0 so WordPress treats it as a
+> theme first, then upload. This version is 5.32.0 so WordPress treats it as a
 > fresh install (no stale files).
 
 ### 2. Install recommended plugins
