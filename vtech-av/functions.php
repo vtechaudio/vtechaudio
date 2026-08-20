@@ -7,8 +7,8 @@
 
 if ( ! defined( 'ABSPATH' ) ) { exit; }
 
-define( 'VTECH_VERSION', '5.33.0' );
-define( 'VTECH_BUILD', 'v5.33-2026-08-20' );
+define( 'VTECH_VERSION', '5.34.0' );
+define( 'VTECH_BUILD', 'v5.34-2026-08-20' );
 define( 'VTECH_DIR', get_template_directory() );
 define( 'VTECH_URI', get_template_directory_uri() );
 
@@ -106,8 +106,7 @@ function vtech_assets() {
 	// main.css is now inlined in <head> by inc/performance.php (foolproof).
 	// A no-op handle is still registered so child themes / plugins that
 	// declare 'vtech-main' as a dependency don't error.
-	wp_register_style( 'vtech-main', false );
-	wp_enqueue_style( 'vtech-main' );
+	wp_enqueue_style( 'vtech-main', VTECH_URI . '/assets/css/main.css', array(), VTECH_VERSION );
 
 	// Vanilla JS modules, deferred.
 	wp_enqueue_script( 'vtech-app', VTECH_URI . '/assets/js/app.js', array(), VTECH_VERSION, array( 'strategy' => 'defer', 'in_footer' => true ) );

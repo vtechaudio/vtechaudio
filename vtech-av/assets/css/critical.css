@@ -82,3 +82,14 @@ a{color:var(--c-primary);text-decoration:none}
   .nav-toggle span{width:24px;height:2px;background:var(--c-secondary);display:block}
   .utility-bar__hours{display:none}
 }
+
+@media(max-width:768px){
+  .hero__inner{padding-block:2.75rem 3rem;max-width:none}
+  .hero::after{background:linear-gradient(180deg,rgba(18,0,15,.5) 0%,rgba(18,0,15,.3) 42%,rgba(18,0,15,.82) 100%)}
+  .hero__bg{object-position:62% center}
+  .hero__title{font-size:clamp(2.05rem,5.5vw + 1rem,2.9rem)}
+  .hero__sub{font-size:1.02rem}
+  .hero__cta{margin-top:1.5rem}
+  .hero__stats{margin-top:1.75rem;gap:1.25rem 1.75rem}
+}
+

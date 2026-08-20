@@ -28,7 +28,7 @@ add_action( 'wp_head', function () {
 //    to break, no JS/cache-plugin dependency. Total is ~12KB — trivial.
 add_action( 'wp_head', function () {
 	$css = '';
-	foreach ( array( 'critical.css', 'main.css' ) as $f ) {
+	foreach ( array( 'critical.css' ) as $f ) {
 		$path = VTECH_DIR . '/assets/css/' . $f;
 		if ( file_exists( $path ) ) { $css .= file_get_contents( $path ) . "
 "; }
