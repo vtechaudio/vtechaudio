@@ -31,15 +31,16 @@ add_action( 'customize_register', function ( $wp_customize ) {
 	/* --- Social Media --- */
 	$wp_customize->add_section( 'vtech_social', array( 'title' => 'Social Media Links', 'panel' => 'vtech_panel' ) );
 	$social = array(
-		'vtech_facebook'  => 'Facebook URL',
-		'vtech_instagram' => 'Instagram URL',
-		'vtech_linkedin'  => 'LinkedIn URL',
-		'vtech_x'         => 'X (Twitter) URL',
-		'vtech_youtube'   => 'YouTube URL',
+		'vtech_facebook'  => array( 'Facebook URL', 'https://web.facebook.com/vtechaudioke' ),
+		'vtech_instagram' => array( 'Instagram URL', '' ),
+		'vtech_linkedin'  => array( 'LinkedIn URL', 'https://www.linkedin.com/company/vtech-audio/' ),
+		'vtech_x'         => array( 'X (Twitter) URL', '' ),
+		'vtech_youtube'   => array( 'YouTube URL', '' ),
+		'vtech_tiktok'    => array( 'TikTok URL', 'https://www.tiktok.com/@vtech.audio' ),
 	);
-	foreach ( $social as $sid => $slabel ) {
-		$wp_customize->add_setting( $sid, array( 'default' => '', 'sanitize_callback' => 'esc_url_raw' ) );
-		$wp_customize->add_control( $sid, array( 'label' => $slabel, 'description' => 'Leave blank to hide this icon.', 'section' => 'vtech_social', 'type' => 'url' ) );
+	foreach ( $social as $sid => $sf ) {
+		$wp_customize->add_setting( $sid, array( 'default' => $sf[1], 'sanitize_callback' => 'esc_url_raw' ) );
+		$wp_customize->add_control( $sid, array( 'label' => $sf[0], 'description' => 'Leave blank to hide this icon.', 'section' => 'vtech_social', 'type' => 'url' ) );
 	}
 
 	/* --- Hero --- */

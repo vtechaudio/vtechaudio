@@ -46,8 +46,8 @@ stats, FAQ, CTA) using the bundled images — it shows even before setup runs.
 
 ## Make it yours (like any WordPress theme)
 - **Customize → VTECH Theme Options**: phone, WhatsApp, email, address, hours, Google Map, hero, conversion toggles, analytics ID.
-  > IMPORTANT: replace the placeholder phone "+254 28 135246" — it is not a valid
-  > Kenyan format. Set your real number here (used in header, footer, schema, contact).
+  > The official VTECH number is +254 728 135 246 (WhatsApp 254728135246). It is the default
+  > here and in schema; change it only if the business number changes.
 - **Pages / Services / Projects**: edit the text.
 - **Media library**: the AI placeholder images are real files — replace each with your own VTECH photos (keep similar dimensions).
 - **Appearance → Menus**: reorder or add items.

@@ -11,8 +11,16 @@ if ( ! defined( 'ABSPATH' ) ) { exit; }
 function vtech_nap() {
 	// Pull live social profiles from theme options so schema matches the site.
 	$same = array();
-	foreach ( array( 'vtech_facebook', 'vtech_instagram', 'vtech_linkedin', 'vtech_x', 'vtech_youtube' ) as $vtc_sk ) {
-		$vtc_su = get_theme_mod( $vtc_sk, '' );
+	$vtc_socials = array(
+		'vtech_facebook'  => 'https://web.facebook.com/vtechaudioke',
+		'vtech_instagram' => '',
+		'vtech_linkedin'  => 'https://www.linkedin.com/company/vtech-audio/',
+		'vtech_x'         => '',
+		'vtech_youtube'   => '',
+		'vtech_tiktok'    => 'https://www.tiktok.com/@vtech.audio',
+	);
+	foreach ( $vtc_socials as $vtc_sk => $vtc_default ) {
+		$vtc_su = get_theme_mod( $vtc_sk, $vtc_default );
 		if ( $vtc_su ) { $same[] = $vtc_su; }
 	}
 	$vtc_wa = preg_replace( '/\D+/', '', (string) get_theme_mod( 'vtech_whatsapp', '254728135246' ) );
